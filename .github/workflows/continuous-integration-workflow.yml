@@ -26,6 +26,9 @@ jobs:
     
     - name: Install node modules
       run: npm ci
+
+    - name: Build
+      run: npm build
       
     - name: Run tests
       run: npm run test-no-watch
