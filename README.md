@@ -1,5 +1,7 @@
 🚀 This is a ReactJS boilerplate 🚀 It's not perfect, but it's ideal 👌
 
+<br />
+
 <!-- prettier-ignore-start -->
 ![Continuous Integration](https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg)
 [![License](https://img.shields.io/npm/l/cra-template-ideal-starter.svg)](https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE)
