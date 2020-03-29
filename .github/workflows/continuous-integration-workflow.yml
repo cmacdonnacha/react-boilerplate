@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -26,15 +24,7 @@ jobs:
       uses: actions/setup-node@v1.1.0
     
     - name: Install node modules
-      run: npm install
-    # Runs a set of commands using the runners shell
-#     - name: Run tests
-#       run: |
-#         echo Running tests
-#         npm test
-        
-#     # Runs a set of commands using the runners shell
-#     - name: Run tests
-#       run: |
-#         echo Running tests
-#         npm test
+      run: npm ci
+      
+    - name: Run tests
+      run: npm test
