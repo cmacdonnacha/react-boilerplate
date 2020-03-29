@@ -7,14 +7,6 @@
 [![License](https://img.shields.io/npm/l/cra-template-ideal-starter.svg)](https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE)
 <!-- prettier-ignore-end -->
 
-## Usage
-
-### npx
-
-```sh
-npx create-react-app my-app --template cra-template-ideal-starter
-```
-
 ## Includes
 
 - [typescript][typescript]
