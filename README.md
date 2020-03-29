@@ -17,7 +17,7 @@
 
 ## Set up
 
-1. Click the `Use Template` button or `git clone my-app https://github.com/cmacdonnacha/react-boilerplate.git`
+1. Click the `Use this Template` button or `git clone my-app https://github.com/cmacdonnacha/react-boilerplate.git`
 2. `cd my-app`
 3. `npm install`
 4. That's it! See the **Available Commands** list below.
