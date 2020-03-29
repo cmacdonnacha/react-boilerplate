@@ -1,4 +1,4 @@
-🚀 This is a ReactJS boilerplate 🚀 It's not perfect, but it's ideal 👌
+🚀 This is a ReactJS boilerplate. It's not perfect, but it's ideal 👌
 
 <br />
 
