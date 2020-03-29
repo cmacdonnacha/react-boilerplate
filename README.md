@@ -22,20 +22,6 @@
 3. `npm install`
 4. That's it! See the **Available Commands** list below.
 
-## TODO
-
-- View reports: If you open the index.html file in browser located at coverage/lcov-report folder you will be able to view the report
-- Recommended VS code extensions
-- Have separe section on testing
-  - https://react-testing-examples.com/
-  - When writing tests, think of http://wiki.c2.com/?ArrangeActAssert
-  - React Testing lib cheat sheet https://testing-library.com/docs/react-testing-library/cheatsheet
-  - Dark mode theme
-- My VS code snippets: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
-- Link to others as well as I don't have many
-- in VS code, enable editor on save. Perhaps store my settings as gist as well?
-- add github actions CI to list of "includes"
-
 ## Available Commands
 
 In the project directory, you can run:
@@ -90,3 +76,17 @@ Licensed under the MIT license.
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
 <!-- prettier-ignore-end -->
+
+## TODO
+
+- View reports: If you open the index.html file in browser located at coverage/lcov-report folder you will be able to view the report
+- Recommended VS code extensions
+- Have separe section on testing
+  - https://react-testing-examples.com/
+  - When writing tests, think of http://wiki.c2.com/?ArrangeActAssert
+  - React Testing lib cheat sheet https://testing-library.com/docs/react-testing-library/cheatsheet
+  - Dark mode theme
+- My VS code snippets: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
+- Link to others as well as I don't have many
+- in VS code, enable editor on save. Perhaps store my settings as gist as well?
+- add github actions CI to list of "includes"
