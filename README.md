@@ -1,4 +1,4 @@
-This is a ReactJS boilerplate. It's not perfect, but it's ideal 👌
+🚀 This is a ReactJS boilerplate 🚀 It's not perfect, but it's ideal 👌
 
 <!-- prettier-ignore-start -->
 ![Continuous Integration](https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg)
@@ -23,7 +23,10 @@ npx create-react-app my-app --template cra-template-ideal-starter
 
 ## Set up
 
-...
+1. Click the `Use Template` button or `git clone my-app https://github.com/cmacdonnacha/react-boilerplate.git`
+2. `cd my-app`
+3. `npm install`
+4. That's it! See the **Available Commands** list below.
 
 ## TODO
 
@@ -38,7 +41,7 @@ npx create-react-app my-app --template cra-template-ideal-starter
 - Link to others as well as I don't have many
 - in VS code, enable editor on save. Perhaps store my settings as gist as well?
 
-## Available Scripts
+## Available Commands
 
 In the project directory, you can run:
 
@@ -52,7 +55,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode. Use `npm run test-no-watch` to run tests without a watcher.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
@@ -68,12 +71,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run lint`
 
 Runs the ESLint typescript code lint checker. Running `npm run lint:fix` will automatically fix any lint errors where possible.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## License
 
