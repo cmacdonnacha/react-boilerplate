@@ -34,6 +34,7 @@
 - My VS code snippets: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
 - Link to others as well as I don't have many
 - in VS code, enable editor on save. Perhaps store my settings as gist as well?
+- add github actions CI to list of "includes"
 
 ## Available Commands
 
