@@ -1,11 +1,8 @@
-This is a [Create React App](https://github.com/facebook/create-react-app) template. It's not perfect, but it's ideal 👌
+This is a ReactJS boilerplate. It's not perfect, but it's ideal 👌
 
 <!-- prettier-ignore-start -->
-[![version][version-badge]][package]
+![Continuous Integration](https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg)
 [![License](https://img.shields.io/npm/l/cra-template-ideal-starter.svg)](https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE)
-
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
 <!-- prettier-ignore-end -->
 
 ## Usage
@@ -24,19 +21,9 @@ npx create-react-app my-app --template cra-template-ideal-starter
 - [eslint][eslint]
 - [prettier][prettier]
 
-## Additional set up
+## Set up
 
-The following is not yet supported by [Create React App](https://github.com/facebook/create-react-app) so must be added manually:
-
-1. Add the following to your `package.json` file to run prettier formatting and eslint checks after a git commit:
-
-```
-    "husky": {
-      "hooks": {
-        "pre-commit": "pretty-quick --staged"
-      }
-    }
-```
+...
 
 ## TODO
 
@@ -95,7 +82,7 @@ Licensed under the MIT license.
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
-[version-badge]: https://img.shields.io/npm/v/cra-template-ideal-starter.svg?style=flat-square
+[continuous-integration-badge]: https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg
 [package]: https://www.npmjs.com/package/cra-template-ideal-starter
 [license-badge]: https://img.shields.io/npm/l/cmacdonnacha/cra-template-ideal-starter.svg?style=flat-square
 [license]: https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE
