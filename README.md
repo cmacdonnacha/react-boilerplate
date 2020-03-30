@@ -2,7 +2,8 @@
 
 <!-- prettier-ignore-start -->
 ![continuous-integration-badge]
-[![License](https://img.shields.io/npm/l/cra-template-ideal-starter.svg)](https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE)
+![dependencies-badge]
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 <!-- prettier-ignore-end -->
 
 ## Includes
@@ -47,7 +48,7 @@ Runs tests without a watcher.
 
 Displays the code coverage within the console and also generates a coverage folder.
 
-> To view the code coverage report in you browser open the `index.html` file within the `coverage/lcov-report` folder.
+> To view the code coverage report in your browser open the `index.html` file within the `coverage/lcov-report` folder.
 
 ### `npm run lint`
 
@@ -75,7 +76,6 @@ Some useful links on [react-testing-library][react-testing-library]:
 - When writing integration tests, use [Arrange, Act, Assert](http://wiki.c2.com/?ArrangeActAssert)
 - [React Testing Library Examples 1](https://react-testing-examples.com/)
 - [React Testing Library Examples 2](https://github.com/kentcdodds/react-testing-library-course/tree/master/src/__tests__)
-- [React Testing Library Examples 1](https://react-testing-examples.com/)
 - [React Testing Library Cheatsheet](https://testing-library.com/docs/dom-testing-library/cheatsheet)
 
 ## VS Code Recommended Extensions
@@ -104,9 +104,8 @@ Licensed under the MIT license.
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
 [continuous-integration-badge]: https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg
+[dependencies-badge]: https://img.shields.io/david/cmacdonnacha/react-boilerplate.svg
 [package]: https://www.npmjs.com/package/cra-template-ideal-starter
-[license-badge]: https://img.shields.io/npm/l/cmacdonnacha/cra-template-ideal-starter.svg?style=flat-square
-[license]: https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE
 [typescript]: https://github.com/microsoft/TypeScript
 [redux]: https://github.com/reduxjs
 [jest]: https://jestjs.io/

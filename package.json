@@ -34,6 +34,13 @@
     ]
   },
   "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -45,18 +52,13 @@
     "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
+    "babel-plugin-macros": "^2.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "husky": "^4.2.3",
     "prettier": "^2.0.1",
     "pretty-quick": "^2.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "styled-components": "^5.0.1",
-    "typescript": "^3.7.5",
-    "babel-plugin-macros": "^2.8.0"
+    "react-scripts": "3.4.1"
   }
 }
