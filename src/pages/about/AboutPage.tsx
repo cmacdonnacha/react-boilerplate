@@ -12,7 +12,7 @@ const Container = styled.div`
 const AboutPage: React.FunctionComponent = () => {
   return (
     <Container>
-      <span>AboutPage</span>
+      <span>This is the about page</span>
     </Container>
   );
 };

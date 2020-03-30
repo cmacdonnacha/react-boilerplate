@@ -7,8 +7,8 @@ test('renders learn react link', () => {
   const { getByText } = render(<AboutPage />);
 
   // Act
-  const linkElement = getByText('AboutPage');
+  const element = getByText('This is the about page');
 
   // Assert
-  expect(linkElement).toBeInTheDocument();
+  expect(element).toBeInTheDocument();
 });

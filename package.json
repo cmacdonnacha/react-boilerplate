@@ -9,7 +9,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint . --ext .ts,.tsx",
-    "test-no-watch": "react-scripts test --watchAll=false"
+    "test:no-watch": "react-scripts test --watchAll=false",
+    "test:coverage": "react-scripts test --coverage"
   },
   "husky": {
     "hooks": {

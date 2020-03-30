@@ -1,19 +1,19 @@
 🚀 This is a ReactJS boilerplate. It's not perfect, but it's ideal 👌
 
-<br />
-
 <!-- prettier-ignore-start -->
-![Continuous Integration](https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg)
+![continuous-integration-badge]
 [![License](https://img.shields.io/npm/l/cra-template-ideal-starter.svg)](https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE)
 <!-- prettier-ignore-end -->
 
 ## Includes
 
-- [typescript][typescript]
-- [redux][redux]
-- [react-testing-library][react-testing-library]
-- [eslint][eslint]
-- [prettier][prettier]
+- [Typescript][typescript]
+- [Redux][redux]
+- [Jest][jest]
+- [React Testing Library][react-testing-library]
+- [ESLint][eslint]
+- [Prettier][prettier]
+- [Github Actions CI][github-actions]
 
 ## Set up
 
@@ -36,8 +36,22 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode. Use `npm run test-no-watch` to run tests without a watcher.<br />
+Launches the test runner in the interactive watch mode. Use `npm run test:no-watch` to run tests without a watcher.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm test:no-watch`
+
+Runs tests without a watcher.
+
+### `npm test:coverage`
+
+Displays the code coverage within the console and also generates a coverage folder.
+
+> To view the code coverage report in you browser open the `index.html` file within the `coverage/lcov-report` folder.
+
+### `npm run lint`
+
+Runs the ESLint typescript code lint checker. Running `npm run lint:fix` will automatically fix any lint errors where possible.
 
 ### `npm run build`
 
@@ -49,9 +63,38 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run lint`
+## Testing
 
-Runs the ESLint typescript code lint checker. Running `npm run lint:fix` will automatically fix any lint errors where possible.
+> [Write Tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
+
+The [react-testing-library][react-testing-library] is a great utility to work along side Jest. It makes you focus more on writing tests the way an actual user would interact with your application.
+
+Some useful links on [react-testing-library][react-testing-library]:
+
+- [Kent C Dodds's blog][react-testing-library]
+- When writing integration tests, use [Arrange, Act, Assert](http://wiki.c2.com/?ArrangeActAssert)
+- [React Testing Library Examples 1](https://react-testing-examples.com/)
+- [React Testing Library Examples 2](https://github.com/kentcdodds/react-testing-library-course/tree/master/src/__tests__)
+- [React Testing Library Examples 1](https://react-testing-examples.com/)
+- [React Testing Library Cheatsheet](https://testing-library.com/docs/dom-testing-library/cheatsheet)
+
+## VS Code Recommended Extensions
+
+- [Prettier][vscode-extension-prettier]
+- [Spell Checker][vscode-extension-spell-checker]
+- [ESLint][vscode-extension-eslint]
+- [Git Lens][vscode-extension-git-lens]
+- [Auto Rename HTML Tags][vscode-extension-auto-rename-tag]
+- [Styled Components Syntax Highlighter][vscode-extension-styled-components]
+
+## VS Code Snippets
+
+- [My Typescript React snippets][vs-code-my-typescript-react-snippets]
+- [Published Typescript React snippets][vs-code-typescript-react-snippets]
+
+## VS Code Recommended Settings
+
+- [My preferred VS Code settings][vs-code-my-settings]
 
 ## License
 
@@ -66,27 +109,29 @@ Licensed under the MIT license.
 [license]: https://github.com/cmacdonnacha/cra-template-ideal-starter/blob/master/LICENSE
 [typescript]: https://github.com/microsoft/TypeScript
 [redux]: https://github.com/reduxjs
+[jest]: https://jestjs.io/
 [react-testing-library]: https://testing-library.com/docs/react-testing-library/intro
-[github-watch-badge]: https://img.shields.io/github/watchers/cmacdonnacha/cra-template-ideal-starter.svg?style=social
-[github-watch]: https://github.com/cmacdonnacha/cra-template-ideal-starter/watchers
-[github-star-badge]: https://img.shields.io/github/stars/cmacdonnacha/cra-template-ideal-starter.svg?style=social
-[github-star]: https://github.com/cmacdonnacha/cra-template-ideal-starter/stargazers
 [cra]: https://github.com/facebook/create-react-app
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
+[github-actions]: https://github.com/features/actions
+[vs-code-my-typescript-react-snippets]: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
+[vs-code-my-settings]: https://gist.github.com/cmacdonnacha/b6360f349c1a86aafda28f6d44c9d215
+[vs-code-typescript-react-snippets]: https://github.com/infeng/vscode-react-typescript#readme
+[vscode-extension-prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+[vscode-extension-auto-rename-tag]: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+[vscode-extension-spell-checker]: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+[vscode-extension-eslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[vscode-extension-git-lens]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+[vscode-extension-styled-components]: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
 <!-- prettier-ignore-end -->
 
 ## TODO
 
-- View reports: If you open the index.html file in browser located at coverage/lcov-report folder you will be able to view the report
-- Recommended VS code extensions
-- Have separe section on testing
-  - https://react-testing-examples.com/
-  - When writing tests, think of http://wiki.c2.com/?ArrangeActAssert
-  - React Testing lib cheat sheet https://testing-library.com/docs/react-testing-library/cheatsheet
+- Change name of continuous integration badge to "Tests" and "Build"
+- Accessibility - Aria labels
+- GitHub pages
   - Dark mode theme
-- My VS code snippets: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
-- Link to others as well as I don't have many
-- in VS code, enable editor on save. Perhaps store my settings as gist as well?
-- add github actions CI to list of "includes"
+- Mobile friendly - hide sidebar but show menu button on mobile
+- Show dependencies out of date badge

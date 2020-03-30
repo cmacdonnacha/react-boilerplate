@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 const Layout = styled.div`
-  /* A 3 rows x 3 columns css grid*/
+  /* A 3 rows x 3 columns css grid */
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   grid-template-columns: 1fr 3fr 1fr;
