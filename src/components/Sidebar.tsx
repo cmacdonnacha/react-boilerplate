@@ -31,9 +31,6 @@ const Sidebar: React.FunctionComponent = () => {
         <li>
           <StyledNavLink to="/about">About</StyledNavLink>
         </li>
-        <li>
-          <StyledNavLink to="/dashboard">Dashboard</StyledNavLink>
-        </li>
       </ul>
     </Container>
   );

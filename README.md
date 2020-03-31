@@ -64,19 +64,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run analyze`
+
+This will run a production build and then analyze the output using [Source map explorer](https://www.npmjs.com/package/source-map-explorer) which analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
+
 ## Testing
 
 > [Write Tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
 
-The [react-testing-library][react-testing-library] is a great utility to work along side Jest. It makes you focus more on writing tests the way an actual user would interact with your application.
+The [react-testing-library][react-testing-library] is a great utility to work alongside Jest. It makes you focus more on writing tests the way an actual user would interact with your application.
 
 Some useful links on [react-testing-library][react-testing-library]:
 
 - [Kent C Dodds's blog][react-testing-library]
-- When writing integration tests, use [Arrange, Act, Assert](http://wiki.c2.com/?ArrangeActAssert)
+- When writing integration tests, think of [Arrange, Act, Assert](http://wiki.c2.com/?ArrangeActAssert)
 - [React Testing Library Examples 1](https://react-testing-examples.com/)
 - [React Testing Library Examples 2](https://github.com/kentcdodds/react-testing-library-course/tree/master/src/__tests__)
 - [React Testing Library Cheatsheet](https://testing-library.com/docs/dom-testing-library/cheatsheet)
+- [Jest DOM Custom Matchers - Use for Integration Tests](https://github.com/testing-library/jest-dom#custom-matchers)
+- [Jest Matchers - Use for Unit Tests](https://jestjs.io/docs/en/expect)
 
 ## VS Code Recommended Extensions
 
@@ -130,7 +136,8 @@ Licensed under the MIT license.
 
 - Change name of continuous integration badge to "Tests" and "Build"
 - Accessibility - Aria labels
-- GitHub pages
-  - Dark mode theme
+- GitHub pages - live demo - automate via actions
+- Dark mode theme
 - Mobile friendly - hide sidebar but show menu button on mobile
 - Show dependencies out of date badge
+- When refreshing while a friend link is open, it should keep the same state.
