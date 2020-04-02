@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { MenuOutline } from '@styled-icons/evaicons-outline/MenuOutline';
+import MenuButton from './MenuButton';
+
+interface Props {
+  isSidebarOpen: boolean;
+  onMenuButtonClicked: () => void;
+}
 
 const Container = styled.header`
   grid-area: header;
@@ -8,20 +13,22 @@ const Container = styled.header`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 5px;
+  padding-left: 10px;
   border: 2px solid blue;
 `;
 
-const Title = styled.span`
-  border: 2px solid yellow;
+const Title = styled.h3`
   margin-left: 10px;
+
+  @media (max-width: 768px) {
+    margin-left: 45px;
+  }
 `;
 
-const Header: React.FunctionComponent = () => {
+const Header: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container>
-      <MenuOutline size={30} />
-
+      <MenuButton isOpen={props.isSidebarOpen} onClick={props.onMenuButtonClicked} />
       <Title>React Boilerplate</Title>
     </Container>
   );

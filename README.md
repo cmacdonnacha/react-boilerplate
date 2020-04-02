@@ -6,10 +6,21 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 <!-- prettier-ignore-end -->
 
+🛠 Work In Progress 🛠
+
+## TODO
+
+- Add Redux
+- Add friends list
+- GitHub pages - live demo - automate via actions
+- Dark mode theme
+- Mobile friendly - Use constants for screen sizes.
+- Show dependencies out of date badge
+- Use colour constants (primary and secondary) instead of hardcoded hex.
+
 ## Includes
 
 - [Typescript][typescript]
-- [Redux][redux]
 - [Jest][jest]
 - [React Testing Library][react-testing-library]
 - [ESLint][eslint]
@@ -131,13 +142,3 @@ Licensed under the MIT license.
 [vscode-extension-git-lens]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 [vscode-extension-styled-components]: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
 <!-- prettier-ignore-end -->
-
-## TODO
-
-- Change name of continuous integration badge to "Tests" and "Build"
-- Accessibility - Aria labels
-- GitHub pages - live demo - automate via actions
-- Dark mode theme
-- Mobile friendly - hide sidebar but show menu button on mobile
-- Show dependencies out of date badge
-- When refreshing while a friend link is open, it should keep the same state.
