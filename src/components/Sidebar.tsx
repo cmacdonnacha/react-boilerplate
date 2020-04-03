@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { NavLink } from 'react-router-dom';
 import { colours } from '../constants/colours';
+import { screenSize } from '../constants/screenSizes';
 
 interface Props {
   isSidebarOpen?: boolean;
@@ -16,7 +17,7 @@ const Container = styled.nav<Props>`
   overflow-y: auto;
   min-width: 200px;
 
-  @media (max-width: 769px) {
+  @media (max-width: ${screenSize.medium}) {
     position: absolute;
     height: 100%;
     transition: transform 0.3s ease-in-out;
@@ -29,7 +30,7 @@ const SidebarList = styled.ul`
   list-style: none;
   padding: 0;
 
-  @media (max-width: 769px) {
+  @media (max-width: ${screenSize.medium}) {
     margin-top: 60px;
   }
 `;
@@ -38,7 +39,7 @@ const SidebarListItem = styled.li`
   padding: 15px;
   font-size: 1rem;
 
-  @media (max-width: 769px) {
+  @media (max-width: ${screenSize.medium}) {
     padding: 20px;
     font-size: 1.2rem;
   }

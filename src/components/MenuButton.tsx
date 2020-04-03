@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { screenSize } from '../constants/screenSizes';
 
 interface Props {
   isOpen: boolean;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const StyledMenuButton = styled.button<Props>`
-  @media (min-width: 768px) {
+  @media (min-width: ${screenSize.medium}) {
     display: none;
   }
 

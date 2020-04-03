@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import MenuButton from './MenuButton';
+import { screenSize } from '../constants/screenSizes';
 
 interface Props {
   isSidebarOpen: boolean;
@@ -20,7 +21,7 @@ const Container = styled.header`
 const Title = styled.h3`
   margin-left: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${screenSize.medium}) {
     margin-left: 2.5em;
   }
 `;
