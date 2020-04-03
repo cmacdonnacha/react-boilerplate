@@ -10,18 +10,18 @@ interface Props {
 
 const Container = styled.nav<Props>`
   grid-area: sidebar;
+  background-color: #7b69ea;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  min-width: 40%;
-  background-color: #7b69ea;
+  min-width: 200px;
 
   @media (max-width: 769px) {
     position: absolute;
     height: 100%;
     transition: transform 0.3s ease-in-out;
     transform: translateX(${(props): string => (props.isSidebarOpen ? '0' : '-100%')});
-    min-width: ${(props): string => (props.isSidebarOpen ? '60%' : '0')};
+    min-width: 70%;
   }
 `;
 
@@ -30,13 +30,18 @@ const SidebarList = styled.ul`
   padding: 0;
 
   @media (max-width: 769px) {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 `;
 
 const SidebarListItem = styled.li`
   padding: 15px;
-  font-size: 20px;
+  font-size: 1rem;
+
+  @media (max-width: 769px) {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`

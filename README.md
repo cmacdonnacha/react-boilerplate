@@ -15,7 +15,6 @@
 - GitHub pages - live demo - automate via actions
 - Dark mode theme
 - Mobile friendly - Use constants for screen sizes.
-- Show dependencies out of date badge
 - Use colour constants (primary and secondary) instead of hardcoded hex.
 
 ## Includes
@@ -26,6 +25,7 @@
 - [ESLint][eslint]
 - [Prettier][prettier]
 - [Github Actions CI][github-actions]
+- [Styled Icons][styled-icons]
 
 ## Set up
 
@@ -132,6 +132,7 @@ Licensed under the MIT license.
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
 [github-actions]: https://github.com/features/actions
+[styled-icons]: https://styled-icons.js.org/
 [vs-code-my-typescript-react-snippets]: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
 [vs-code-my-settings]: https://gist.github.com/cmacdonnacha/b6360f349c1a86aafda28f6d44c9d215
 [vs-code-typescript-react-snippets]: https://github.com/infeng/vscode-react-typescript#readme

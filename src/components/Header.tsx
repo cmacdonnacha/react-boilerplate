@@ -21,7 +21,7 @@ const Title = styled.h3`
   margin-left: 10px;
 
   @media (max-width: 768px) {
-    margin-left: 45px;
+    margin-left: 2.5em;
   }
 `;
 
@@ -29,6 +29,7 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container>
       <MenuButton isOpen={props.isSidebarOpen} onClick={props.onMenuButtonClicked} />
+
       <Title>React Boilerplate</Title>
     </Container>
   );
