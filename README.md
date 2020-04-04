@@ -14,10 +14,10 @@
 - Add friends list
 - GitHub pages - live demo - automate via actions
 - Dark mode theme
-- Mobile friendly - Use constants for screen sizes.
 - Use colour constants (primary and secondary) instead of hardcoded hex.
+- Use Framer Motion api for route change animation
 
-## Includes
+## Features
 
 - [Typescript][typescript]
 - [Jest][jest]
@@ -26,6 +26,8 @@
 - [Prettier][prettier]
 - [Github Actions CI][github-actions]
 - [Styled Icons][styled-icons]
+- [Source Map Explorer][source-map-explorer] to analyze code bloat
+- Mobile friendly
 
 ## Set up
 
@@ -77,7 +79,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run analyze`
 
-This will run a production build and then analyze the output using [Source map explorer](https://www.npmjs.com/package/source-map-explorer) which analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
+This will run a production build and then analyze the output using [source-map-explorer] which analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
 
 ## Testing
 
@@ -128,6 +130,7 @@ Licensed under the MIT license.
 [jest]: https://jestjs.io/
 [react-testing-library]: https://testing-library.com/docs/react-testing-library/intro
 [cra]: https://github.com/facebook/create-react-app
+[source-map-explorer]: https://www.npmjs.com/package/source-map-explorer
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html

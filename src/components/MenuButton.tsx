@@ -24,6 +24,7 @@ const StyledMenuButton = styled.button<Props>`
   padding: 0;
   z-index: 10;
 
+  /* Should not remove focus outline as it degrades accessability */
   &:focus {
     outline: none;
   }

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import MenuButton from './MenuButton';
 import { screenSize } from '../constants/screenSizes';
+import IconButton from './IconButton';
+import { MenuOutline } from '@styled-icons/evaicons-outline/MenuOutline';
 
 interface Props {
   isSidebarOpen: boolean;
@@ -30,7 +32,7 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container>
       <MenuButton isOpen={props.isSidebarOpen} onClick={props.onMenuButtonClicked} />
-
+      <IconButton icon={MenuOutline} />
       <Title>React Boilerplate</Title>
     </Container>
   );
