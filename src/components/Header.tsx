@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import MenuButton from './MenuButton';
 import { screenSize } from '../constants/screenSizes';
-import IconButton from './IconButton';
-import { MenuOutline } from '@styled-icons/evaicons-outline/MenuOutline';
 
 interface Props {
   isSidebarOpen: boolean;
@@ -21,10 +19,10 @@ const Container = styled.header`
 `;
 
 const Title = styled.h3`
-  margin-left: 10px;
+  margin-left: 2.5em;
 
-  @media (max-width: ${screenSize.medium}) {
-    margin-left: 2.5em;
+  @media (min-width: ${screenSize.medium}) {
+    margin-left: 0.5em;
   }
 `;
 
@@ -32,7 +30,6 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container>
       <MenuButton isOpen={props.isSidebarOpen} onClick={props.onMenuButtonClicked} />
-      <IconButton icon={MenuOutline} />
       <Title>React Boilerplate</Title>
     </Container>
   );

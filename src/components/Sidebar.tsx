@@ -17,6 +17,7 @@ const Container = styled.nav<Props>`
   overflow-y: auto;
   min-width: 200px;
 
+  /* This style will trigger when the screen width is less than 640px (i.e tablet size) */
   @media (max-width: ${screenSize.medium}) {
     position: absolute;
     height: 100%;
@@ -29,19 +30,21 @@ const Container = styled.nav<Props>`
 const SidebarList = styled.ul`
   list-style: none;
   padding: 0;
+  margin-top: 60px;
 
-  @media (max-width: ${screenSize.medium}) {
-    margin-top: 60px;
+  /* This style will trigger when the screen width is over 640px (i.e tablet size) */
+  @media (min-width: ${screenSize.medium}) {
+    margin-top: 0;
   }
 `;
 
 const SidebarListItem = styled.li`
-  padding: 15px;
-  font-size: 1rem;
+  padding: 20px;
+  font-size: 1.2rem;
 
-  @media (max-width: ${screenSize.medium}) {
-    padding: 20px;
-    font-size: 1.2rem;
+  @media (min-width: ${screenSize.medium}) {
+    padding: 15px;
+    font-size: 1rem;
   }
 `;
 
