@@ -24,6 +24,7 @@ const Container = styled.nav<Props>`
     transition: transform 0.3s ease-in-out;
     transform: translateX(${(props): string => (props.isSidebarOpen ? '0' : '-100%')});
     min-width: 70%;
+    z-index: 2;
   }
 `;
 

@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import { colours } from './constants/colours';
 import Routes from './components/Routes';
 import Header from './components/Header';
+import Backdrop from './components/Backdrop';
 
 const Layout = styled.div`
   height: 100%;
@@ -26,10 +27,13 @@ function App(): JSX.Element {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  const backdrop = isSidebarOpen ? <Backdrop onClick={toggleSidebar} /> : null;
+
   return (
     <Layout>
       <Header isSidebarOpen={isSidebarOpen} onMenuButtonClicked={toggleSidebar} />
       <Sidebar isSidebarOpen={isSidebarOpen} onSidebarLinkClicked={toggleSidebar} />
+      {backdrop}
       <Routes />
     </Layout>
   );
