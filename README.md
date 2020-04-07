@@ -10,15 +10,14 @@
 
 ## TODO
 
-- Add Redux
-- Add friends list
+- Use axios instead of fetch
 - GitHub pages - live demo - automate via actions
 - Dark mode theme
 - Use colour constants (primary and secondary) instead of hardcoded hex.
-- Use Framer Motion api for route change animation
 
 ## Features
 
+- [Redux Toolkit][redux-toolkit]
 - [Typescript][typescript]
 - [Jest][jest]
 - [React Testing Library][react-testing-library]
@@ -126,7 +125,7 @@ Licensed under the MIT license.
 [dependencies-badge]: https://img.shields.io/david/cmacdonnacha/react-boilerplate.svg
 [package]: https://www.npmjs.com/package/cra-template-ideal-starter
 [typescript]: https://github.com/microsoft/TypeScript
-[redux]: https://github.com/reduxjs
+[redux-toolkit]: https://github.com/reduxjs/redux-toolkit
 [jest]: https://jestjs.io/
 [react-testing-library]: https://testing-library.com/docs/react-testing-library/intro
 [cra]: https://github.com/facebook/create-react-app

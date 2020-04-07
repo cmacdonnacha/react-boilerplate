@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+
+import App from './App';
+import rootReducer from './slices';
+
+const store = configureStore({ reducer: rootReducer });
 
 const theme = {
   primary: '#00C068',
@@ -25,14 +31,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <React.Fragment>
-      <Router>
-        <Route path="/" component={App}></Route>
-      </Router>
-      <GlobalStyle />
-    </React.Fragment>
-  </ThemeProvider>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <Router>
+          <Route path="/" component={App}></Route>
+        </Router>
+        <GlobalStyle />
+      </React.Fragment>
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root'),
 );
 

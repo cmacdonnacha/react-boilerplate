@@ -32,23 +32,23 @@ const StyledMenuButton = styled.button<Props>`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ isOpen }): string => (isOpen ? 'white' : '#7b69ea')};
+    background: ${({ isOpen }) => (isOpen ? 'white' : '#7b69ea')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ isOpen }): string => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     :nth-child(2) {
-      opacity: ${({ isOpen }): string => (isOpen ? '0' : '1')};
-      transform: ${({ isOpen }): string => (isOpen ? 'translateX(20px)' : 'translateX(0)')};
+      opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+      transform: ${({ isOpen }) => (isOpen ? 'translateX(20px)' : 'translateX(0)')};
     }
 
     :nth-child(3) {
-      transform: ${({ isOpen }): string => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;

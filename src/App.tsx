@@ -17,7 +17,7 @@ const Layout = styled.div`
   grid-template-columns: auto 2fr;
   grid-template-areas:
     'header header'
-    'sidebar content ';
+    'sidebar content';
 `;
 
 function App(): JSX.Element {
@@ -27,12 +27,18 @@ function App(): JSX.Element {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  const onSidebarLinkClicked = (): void => {
+    if (isSidebarOpen) {
+      toggleSidebar();
+    }
+  };
+
   const backdrop = isSidebarOpen ? <Backdrop onClick={toggleSidebar} /> : null;
 
   return (
     <Layout>
       <Header isSidebarOpen={isSidebarOpen} onMenuButtonClicked={toggleSidebar} />
-      <Sidebar isSidebarOpen={isSidebarOpen} onSidebarLinkClicked={toggleSidebar} />
+      <Sidebar isSidebarOpen={isSidebarOpen} onLinkClicked={onSidebarLinkClicked} />
       {backdrop}
       <Routes />
     </Layout>

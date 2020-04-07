@@ -6,7 +6,7 @@ import { screenSize } from '../constants/screenSizes';
 
 interface Props {
   isSidebarOpen?: boolean;
-  onSidebarLinkClicked?: () => void;
+  onLinkClicked?: () => void;
 }
 
 const Container = styled.nav<Props>`
@@ -22,7 +22,7 @@ const Container = styled.nav<Props>`
     position: absolute;
     height: 100%;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(${(props): string => (props.isSidebarOpen ? '0' : '-100%')});
+    transform: translateX(${(props) => (props.isSidebarOpen ? '0' : '-100%')});
     min-width: 70%;
     z-index: 2;
   }
@@ -64,12 +64,12 @@ const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
     <Container isSidebarOpen={props.isSidebarOpen}>
       <SidebarList>
         <SidebarListItem aria-label="My Friends Link">
-          <StyledNavLink to="/" exact onClick={props.onSidebarLinkClicked}>
+          <StyledNavLink to="/" exact onClick={props.onLinkClicked}>
             My Friends
           </StyledNavLink>
         </SidebarListItem>
         <SidebarListItem>
-          <StyledNavLink to="/about" onClick={props.onSidebarLinkClicked}>
+          <StyledNavLink to="/about" onClick={props.onLinkClicked}>
             About
           </StyledNavLink>
         </SidebarListItem>
