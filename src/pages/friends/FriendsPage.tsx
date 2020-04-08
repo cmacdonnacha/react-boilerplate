@@ -5,6 +5,7 @@ import { fetchFriends, friendsSelector, Friend } from '../../slices/friendsSlice
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   flex: 1;
   background-color: white;
   justify-content: center;
@@ -16,10 +17,15 @@ const FriendsPage: React.FunctionComponent = () => {
   const { friends, loading, hasErrors } = useSelector(friendsSelector);
 
   const renderFriends = () => {
-    if (loading) return <p>Loading posts...</p>;
-    if (hasErrors) return <p>Unable to display friends.</p>;
+    if (loading) {
+      return <span>Making friends...</span>;
+    }
 
-    return friends.slice(0, 10).map((friend: Friend) => <li key={friend.char_id}>{friend.name}</li>);
+    if (hasErrors || (!loading && friends.length === 0)) {
+      return <span>Unable to find friends :-(</span>;
+    }
+
+    return friends.slice(0, 10).map((friend: Friend) => <li key={friend.id}>{friend.name}</li>);
   };
 
   useEffect(() => {
@@ -28,6 +34,7 @@ const FriendsPage: React.FunctionComponent = () => {
 
   return (
     <Container>
+      <h1>My Friends</h1>
       <ul>{renderFriends()}</ul>
     </Container>
   );

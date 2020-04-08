@@ -1,39 +1,38 @@
 import React from 'react';
 import App from './App';
-import { renderWithRouter } from './utils/test-utils';
+import { renderWithRouterRedux } from './utils/test-utils';
+import { screen } from '@testing-library/react';
 
-describe('Sidebar items should render correct pages', () => {
-  test('should render Friends page as default', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<App />, ['/']);
+test('should render Friends page as default', () => {
+  // Arrange
+  renderWithRouterRedux(<App />, ['/']);
 
-    // Act
-    const myFriendsLink = getByText('My Friends Page');
+  // Act
+  const myFriendsLink = screen.getByText('My Friends');
 
-    // Assert
-    expect(myFriendsLink).toBeInTheDocument();
-  });
+  // Assert
+  expect(myFriendsLink).toBeInTheDocument();
+});
 
-  test('should render About page when clicked', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<App />, ['/']);
+test('should render About page when clicked', () => {
+  // Arrange
+  renderWithRouterRedux(<App />, ['/']);
 
-    // Act
-    getByText('About').click();
+  // Act
+  screen.getByText('About').click();
 
-    // Assert
-    expect(getByText('This is the about page')).toBeInTheDocument();
-  });
+  // Assert
+  expect(screen.getByText('This is the about page')).toBeInTheDocument();
+});
 
-  test('should render Friends page when clicking away and back again', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<App />, ['/']);
+test('should render Friends page when clicking away and back again', () => {
+  // Arrange
+  renderWithRouterRedux(<App />, ['/']);
 
-    // Act
-    getByText('About').click();
-    getByText('My Friends').click();
+  // Act
+  screen.getByText('About').click();
+  screen.getByText('Friends').click();
 
-    // Assert
-    expect(getByText('My Friends Page')).toBeInTheDocument();
-  });
+  // Assert
+  expect(screen.getByText('My Friends')).toBeInTheDocument();
 });

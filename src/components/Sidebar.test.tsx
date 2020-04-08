@@ -1,55 +1,54 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import { renderWithRouter } from '../utils/test-utils';
+import { renderWithRouterRedux } from '../utils/test-utils';
+import { screen } from '@testing-library/react';
 
-describe('Sidebar links', () => {
-  test('should display the correct sidebar items', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<Sidebar />, ['/']);
+test('should display the correct sidebar items', () => {
+  // Arrange
+  renderWithRouterRedux(<Sidebar />, ['/']);
 
-    // Act
-    const friendsLink = getByText('My Friends');
-    const aboutLink = getByText('About');
+  // Act
+  const friendsLink = screen.getByText('Friends');
+  const aboutLink = screen.getByText('About');
 
-    // Assert
-    expect(friendsLink).toBeInTheDocument();
-    expect(aboutLink).toBeInTheDocument();
-  });
+  // Assert
+  expect(friendsLink).toBeInTheDocument();
+  expect(aboutLink).toBeInTheDocument();
+});
 
-  test('should change url when clicking on About link', () => {
-    // Arrange
-    const { history, getByText } = renderWithRouter(<Sidebar />, ['/']);
+test('should change url when clicking on About link', () => {
+  // Arrange
+  const { history } = renderWithRouterRedux(<Sidebar />, ['/']);
 
-    // Act
-    const aboutLink = getByText('About');
-    aboutLink.click();
+  // Act
+  const aboutLink = screen.getByText('About');
+  aboutLink.click();
 
-    // Assert
-    expect(history.location.pathname).toContain('about');
-  });
+  // Assert
+  expect(history.location.pathname).toEqual('/about');
+});
 
-  test('should ensure the About link is set to active when clicked', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<Sidebar />, ['/']);
+test('should ensure the About link is set to active when clicked', () => {
+  // Arrange
+  renderWithRouterRedux(<Sidebar />, ['/']);
 
-    // Act
-    const aboutLink = getByText('About');
-    aboutLink.click();
+  // Act
+  const aboutLink = screen.getByText('About');
+  aboutLink.click();
 
-    // Assert
-    expect(aboutLink).toHaveClass('active');
-  });
+  // Assert
+  expect(aboutLink).toHaveClass('active');
+});
 
-  test('should ensure the About link is NOT set to active when another link is clicked', () => {
-    // Arrange
-    const { getByText } = renderWithRouter(<Sidebar />, ['/']);
+test('should ensure the About link is NOT set to active when another link is clicked', () => {
+  // Arrange
+  renderWithRouterRedux(<Sidebar />, ['/']);
 
-    // Act
-    const aboutLink = getByText('About');
-    aboutLink.click();
-    getByText('My Friends').click();
+  // Act
+  const aboutLink = screen.getByText('About');
+  aboutLink.click();
+  screen.getByText('Friends').click();
 
-    // Assert
-    expect(aboutLink).not.toHaveClass('active');
-  });
+  // Assert
+  expect(aboutLink).not.toHaveClass('active');
 });

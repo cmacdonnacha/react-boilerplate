@@ -65,7 +65,7 @@ const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
       <SidebarList>
         <SidebarListItem aria-label="My Friends Link">
           <StyledNavLink to="/" exact onClick={props.onLinkClicked}>
-            My Friends
+            Friends
           </StyledNavLink>
         </SidebarListItem>
         <SidebarListItem>

@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit';
 import { RootState } from '.';
+import axios from 'axios';
 
 export interface FriendsState {
   loading: boolean;
@@ -8,7 +9,7 @@ export interface FriendsState {
 }
 
 export interface Friend {
-  char_id: number;
+  id: number;
   name: string;
 }
 
@@ -28,8 +29,8 @@ const friendsSlice = createSlice({
     getFriends: (state: FriendsState) => {
       state.loading = true;
     },
-    // getFriendsSuccess: (state: FriendsState, action) => {
     getFriendsSuccess: (state: FriendsState, action: PayloadAction<Friend[]>) => {
+      // Mutating the state directly is usually bad but the 'immer' package, which comes with Redux Toolkit, handles this for us.
       state.friends = action.payload;
       state.loading = false;
       state.hasErrors = false;
@@ -45,6 +46,7 @@ const friendsSlice = createSlice({
 export const { getFriends, getFriendsSuccess, getFriendsFailure } = friendsSlice.actions;
 
 // A selector which we'll use to access the 'friends' root state from a React component instead of using mapStateToProps (the old way).
+// Note: This is not the `friends` property you see at the top of this file but rather the root Friends state in index.ts. They just share the same name.
 export const friendsSelector = (state: RootState) => state.friends;
 
 // The reducer. Again this is exposed by the 'friendsSlice' object created above. In the old Redux this was the equivalent to returning the current friends state inside a separate `friendsReducer.ts` file.
@@ -56,10 +58,11 @@ export function fetchFriends() {
     dispatch(getFriends());
 
     try {
-      const response = await fetch('https://www.breakingbadapi.com/api/characters');
-      const data: Friend[] = await response.json();
-
-      dispatch(getFriendsSuccess(data));
+      //This is my mock rest server. See https://github.com/cmacdonnacha/mock-rest-endpoints for usage.
+      axios.get(`https://my-json-server.typicode.com/cmacdonnacha/mock-rest-endpoints/users`).then((res) => {
+        const friends: Friend[] = res.data;
+        dispatch(getFriendsSuccess(friends));
+      });
     } catch (error) {
       dispatch(getFriendsFailure());
     }
