@@ -31,6 +31,9 @@ const fetchMockNoFriends = () => {
   });
 };
 
+// Give each test a clean slate.
+beforeEach(() => axiosMock.get.mockReset());
+
 test('should find a friend within the list', async () => {
   // Arrange
   fetchMockFriends();
@@ -50,10 +53,10 @@ test('should display loading text while waiting for friends to load', async () =
   renderWithRouterRedux(<FriendsPage />, ['/']);
 
   // Act
-  const element = await waitFor(() => screen.getByText('Making friends...'));
-
-  // Assert
-  expect(element).toHaveTextContent('Making friends...');
+  await waitFor(() => {
+    // Assert
+    expect(screen.getByText('Making friends...')).toBeInTheDocument();
+  });
 });
 
 test('should display error message when no friends found', async () => {
@@ -65,7 +68,8 @@ test('should display error message when no friends found', async () => {
   const element = await waitFor(() => screen.getByText('Unable to find friends :-('));
 
   // Assert
-  expect(element).toHaveTextContent('Unable to find friends :-(');
+  expect(axiosMock.get).toHaveBeenCalledTimes(1);
+  expect(element).toBeInTheDocument();
 });
 
 test('should display error message when an error occurs while fetching friends', async () => {
@@ -76,5 +80,6 @@ test('should display error message when an error occurs while fetching friends',
   const element = await waitFor(() => screen.getByText('Unable to find friends :-('));
 
   // Assert
-  expect(element).toHaveTextContent('Unable to find friends :-(');
+  expect(axiosMock.get).toHaveBeenCalledTimes(1);
+  expect(element).toBeInTheDocument();
 });

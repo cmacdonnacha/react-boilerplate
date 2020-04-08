@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import AboutPage from './AboutPage';
 import { screen } from '@testing-library/react';
 
-test('renders learn react link', () => {
+test('should render about page heading', () => {
   // Arrange
   render(<AboutPage />);
 

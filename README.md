@@ -101,7 +101,7 @@ Some useful links on [react-testing-library][react-testing-library]:
 - [Jest DOM Custom Matchers - Use for Integration Tests](https://github.com/testing-library/jest-dom#custom-matchers)
 - [Jest Matchers - Use for Unit Tests](https://jestjs.io/docs/en/expect)
 
-## VS Code Recommended Extensions
+## Recommended VS Code Extensions
 
 - [Prettier][vscode-extension-prettier]
 - [Spell Checker][vscode-extension-spell-checker]
@@ -115,9 +115,15 @@ Some useful links on [react-testing-library][react-testing-library]:
 - [My Typescript React snippets][vs-code-my-typescript-react-snippets]
 - [Published Typescript React snippets][vs-code-typescript-react-snippets]
 
-## VS Code Recommended Settings
+## Recommended VS Code Settings
 
 - [My preferred VS Code settings][vs-code-my-settings]
+
+## Recommended Chrome Extensions
+
+- [Axe - Web Accessibility Testing][chrome-extension-axe]
+- [Wave - Evaluation Accessibility Tool][chrome-extension-wave]
+- [Redux DevTools][chrome-extension-redux-devtools]
 
 ## License
 
@@ -149,4 +155,7 @@ Licensed under the MIT license.
 [vscode-extension-eslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [vscode-extension-git-lens]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 [vscode-extension-styled-components]: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
+[chrome-extension-axe]: https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd
+[chrome-extension-wave]: https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh
+[chrome-extension-redux-devtools]: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 <!-- prettier-ignore-end -->
