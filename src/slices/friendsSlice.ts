@@ -3,7 +3,7 @@ import { RootState } from '.';
 import axios from 'axios';
 
 export interface FriendsState {
-  loading: boolean;
+  isLoading: boolean;
   hasErrors: boolean;
   friends: Friend[];
 }
@@ -14,7 +14,7 @@ export interface Friend {
 }
 
 export const initialState: FriendsState = {
-  loading: false,
+  isLoading: false,
   hasErrors: false,
   friends: [],
 };
@@ -27,16 +27,16 @@ const friendsSlice = createSlice({
   initialState,
   reducers: {
     getFriends: (state: FriendsState) => {
-      state.loading = true;
+      state.isLoading = true;
     },
     getFriendsSuccess: (state: FriendsState, action: PayloadAction<Friend[]>) => {
       // Mutating the state directly is usually bad but the 'immer' package, which comes with Redux Toolkit, handles this for us.
       state.friends = action.payload;
-      state.loading = false;
+      state.isLoading = false;
       state.hasErrors = false;
     },
     getFriendsFailure: (state) => {
-      state.loading = false;
+      state.isLoading = false;
       state.hasErrors = true;
     },
   },

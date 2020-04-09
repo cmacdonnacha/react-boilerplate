@@ -6,8 +6,7 @@ import { colours } from '../constants/colours';
 interface Props {
   icon: StyledIcon;
   size?: number;
-  ariaLabel?: string;
-  enableTooltip?: boolean;
+  tooltip?: string;
   onClick?: () => void;
 }
 
@@ -22,11 +21,11 @@ const Button = styled.button`
 `;
 
 const IconButton: React.FunctionComponent<Props> = (props: Props) => {
-  const tooltip = props.enableTooltip ? props.ariaLabel : '';
+  const tooltip = props.tooltip;
   const size = props.size || 16;
 
   return (
-    <Button aria-label={props.ariaLabel} title={tooltip} onClick={props.onClick}>
+    <Button title={tooltip} aria-label={props.tooltip} onClick={props.onClick}>
       <props.icon size={size} />
     </Button>
   );

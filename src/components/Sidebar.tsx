@@ -11,7 +11,7 @@ interface Props {
 
 const Container = styled.nav<Props>`
   grid-area: sidebar;
-  background-color: #7b69ea;
+  background-color: #7262da;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -63,7 +63,7 @@ const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container isSidebarOpen={props.isSidebarOpen}>
       <SidebarList>
-        <SidebarListItem aria-label="My Friends Link">
+        <SidebarListItem>
           <StyledNavLink to="/" exact onClick={props.onLinkClicked}>
             Friends
           </StyledNavLink>

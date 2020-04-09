@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFriends, friendsSelector, Friend } from '../../slices/friendsSlice';
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -14,14 +14,14 @@ const Container = styled.div`
 
 const FriendsPage: React.FunctionComponent = () => {
   const dispatch = useDispatch();
-  const { friends, loading, hasErrors } = useSelector(friendsSelector);
+  const { friends, isLoading, hasErrors } = useSelector(friendsSelector);
 
   const renderFriends = () => {
-    if (loading) {
+    if (isLoading && friends.length === 0) {
       return <span>Making friends...</span>;
     }
 
-    if (hasErrors || (!loading && friends.length === 0)) {
+    if (hasErrors || (!isLoading && friends.length === 0)) {
       return <span>Unable to find friends :-(</span>;
     }
 
