@@ -10,6 +10,7 @@ const List = styled.ul`
   flex: 1;
   list-style: none;
   padding: 0;
+  max-width: 500px;
 `;
 
 const FriendsList: React.FunctionComponent = () => {

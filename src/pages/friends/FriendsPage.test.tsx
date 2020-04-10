@@ -15,6 +15,8 @@ const mockFriends: Friend[] = [
   {
     id: 1,
     name: 'Omar Little',
+    email: 'o.little@comeattheking.com',
+    avatarUrl: 'https://i.imgur.com/eTia7Xp.jpg',
   },
 ];
 

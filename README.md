@@ -10,10 +10,9 @@
 
 ## TODO
 
-- Make it look beautiful
+- Add Avatar to sidebar
 - GitHub pages - live demo - automate via actions
 - Dark mode theme
-- Use colour constants (primary and secondary) instead of hardcoded hex.
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 ## Features
@@ -25,10 +24,10 @@
 - [ESLint][eslint]
 - [Prettier][prettier]
 - [Github Actions CI][github-actions]
-- [Styled Icons][styled-icons]
+- [Styled Icons Pack][styled-icons]
 - [Source Map Explorer][source-map-explorer] to analyze code bloat
 - Mobile friendly
-- Test examples
+- Unit & Integration Test examples
 
 ## Set up
 

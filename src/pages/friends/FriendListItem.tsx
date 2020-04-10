@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Friend } from '../../slices/friendsSlice';
 import { colours } from '../../constants/colours';
+import Avatar from '../../components/Avatar';
 
 interface Props {
   friend: Friend;
@@ -15,13 +16,44 @@ const Container = styled.div`
   text-decoration: none;
   background-color: ${colours.grey};
   margin: 10px 0;
-  min-height: 3rem;
+  min-height: 4rem;
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
+`;
+
+const FriendDetailsContainer = styled.div`
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;
+`;
+
+const FriendName = styled.span`
+  display: flex;
+  flex-direction: column;
+  color: ${colours.navy};
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+`;
+
+const FriendEmail = styled.span`
+  display: flex;
+  flex-direction: column;
+  color: ${colours.navy};
+  font-weight: bold;
+  font-size: 0.8rem;
 `;
 
 const FriendListItem: React.FunctionComponent<Props> = (props: Props) => {
-  return <Container>{props.friend.name}</Container>;
+  return (
+    <Container>
+      <Avatar src={props.friend.avatarUrl} size={'4rem'} />
+      <FriendDetailsContainer>
+        <FriendName>{props.friend.name}</FriendName>
+        <FriendEmail>{props.friend.email}</FriendEmail>
+      </FriendDetailsContainer>
+    </Container>
+  );
 };
 
 export default FriendListItem;

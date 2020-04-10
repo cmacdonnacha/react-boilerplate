@@ -9,6 +9,7 @@ const Container = styled.main`
   display: flex;
   flex: 1;
   margin: 10px;
+  overflow-y: auto;
 `;
 
 const Routes: React.FunctionComponent = () => {

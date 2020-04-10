@@ -11,7 +11,7 @@
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint . --ext .ts,.tsx",
     "test:no-watch": "react-scripts test  --watchAll=false --env=jest-environment-jsdom-sixteen",
-    "test:coverage": "react-scripts test --coverage --watchAll=false"
+    "test:coverage": "react-scripts test --coverage --watchAll=false --env=jest-environment-jsdom-sixteen"
   },
   "husky": {
     "hooks": {
@@ -26,6 +26,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,ts,tsx}",
       "!/node_modules/",
+      "!src/utils/**/*",
       "!src/index.tsx",
       "!src/serviceWorker.ts",
       "!src/react-app-env.d.ts"
