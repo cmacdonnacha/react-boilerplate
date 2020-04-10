@@ -9,7 +9,6 @@ import Backdrop from './components/Backdrop';
 
 const Layout = styled.div`
   height: 100%;
-  background-color: ${colours.white};
 
   /* A 2 rows x 2 columns css grid */
   display: grid;

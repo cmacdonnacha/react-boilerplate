@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import rootReducer from './slices';
+import { colours } from './constants/colours';
 
 const store = configureStore({ reducer: rootReducer });
 
@@ -16,17 +17,18 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  html, #root {
+    height: 100%;
+    background-color: ${colours.offWhite};
+  }
+
   body {
     height: 100%;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
       'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  html, #root {
-    height: 100%;
   }
 `;
 

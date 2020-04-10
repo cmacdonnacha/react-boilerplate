@@ -8,9 +8,7 @@ const Container = styled.main`
   grid-area: content;
   display: flex;
   flex: 1;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid red;
+  margin: 10px;
 `;
 
 const Routes: React.FunctionComponent = () => {

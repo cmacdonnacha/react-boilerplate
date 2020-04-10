@@ -1,10 +1,9 @@
 export const colours = {
-  darkGrey: '#484848',
-  grey: '#767676',
-  greyScale: '#eee',
-  lightGrey: '#c3c0c0',
+  primary: '#3a529c',
+  secondary: '#1ca9f0',
   white: '#ffffff',
   black: '#000000',
-  primary: '#2cda9d',
-  secondary: '#2c2f80',
+  grey: '#ededf7',
+  offWhite: '#f4f5f9',
+  navy: '#495576',
 };

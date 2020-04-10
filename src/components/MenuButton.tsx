@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { screenSize } from '../constants/screenSizes';
+import { colours } from '../constants/colours';
 
 interface Props {
   isOpen: boolean;
@@ -32,7 +33,7 @@ const StyledMenuButton = styled.button<Props>`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ isOpen }) => (isOpen ? 'white' : '#7b69ea')};
+    background: ${({ isOpen }) => (isOpen ? colours.primary : colours.white)};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

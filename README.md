@@ -141,7 +141,7 @@ Licensed under the MIT license.
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
-[github-actions]: https://github.com/features/actions
+[github-actions]: https://github.com/cmacdonnacha/react-boilerplate/actions
 [styled-icons]: https://styled-icons.js.org/
 [vs-code-my-typescript-react-snippets]: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
 [vs-code-my-settings]: https://gist.github.com/cmacdonnacha/b6360f349c1a86aafda28f6d44c9d215

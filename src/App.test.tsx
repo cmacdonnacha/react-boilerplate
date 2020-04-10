@@ -8,10 +8,10 @@ test('should render Friends page as default', () => {
   renderWithRouterRedux(<App />, ['/']);
 
   // Act
-  const myFriendsLink = screen.getByText('My Friends');
+  const element = screen.getByText('My Friends');
 
   // Assert
-  expect(myFriendsLink).toBeInTheDocument();
+  expect(element).toBeInTheDocument();
 });
 
 test('should render About page when clicked', () => {
