@@ -13,7 +13,6 @@
     "lint": "tsc --noEmit && eslint . --ext .ts,.tsx",
     "test:no-watch": "react-scripts test  --watchAll=false --env=jest-environment-jsdom-sixteen",
     "test:coverage": "react-scripts test --coverage --watchAll=false --env=jest-environment-jsdom-sixteen",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "husky": {

@@ -10,9 +10,28 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  buildAndTest:
-    name: Build and Test
+  test:
+    name: Run Tests
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v1.1.0
+
+      - name: Install node modules
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:no-watch
+
+  buildAndDeploy:
+    name: Build & Deploy
+    needs: test
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,21 +49,5 @@ jobs:
       - name: Production Build
         run: npm run build
 
-      - name: Run tests
-        run: npm run test:no-watch
-  # This workflow contains a single job called "build"
-  deploy:
-    name: Deploy
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
-
-      - name: Deploy production build
+      - name: Deploy build
         run: npm run deploy
