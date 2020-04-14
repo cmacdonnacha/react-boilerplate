@@ -8,7 +8,7 @@ test('should render about page heading', () => {
   render(<AboutPage />);
 
   // Act
-  const element = screen.getByText('This is the about page');
+  const element = screen.getByText('This is the about page', { exact: false });
 
   // Assert
   expect(element).toBeInTheDocument();

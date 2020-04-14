@@ -33,7 +33,7 @@ const StyledMenuButton = styled.button<Props>`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ isOpen }) => (isOpen ? colours.primary : colours.white)};
+    background: ${colours.white};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

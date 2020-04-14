@@ -21,6 +21,7 @@ const Content = styled.article`
   flex-direction: column;
   background-color: white;
   overflow-y: auto;
+  align-items: center;
 `;
 
 interface Props {

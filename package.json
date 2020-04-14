@@ -3,15 +3,18 @@
   "version": "0.1.2",
   "description": "An opinionated react boilerplate with typescript, redux, react-testing-library, eslint & prettier.",
   "license": "MIT",
+  "homepage": "https://cmacdonnacha.github.io/react-boilerplate/",
   "scripts": {
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint . --ext .ts,.tsx",
     "test:no-watch": "react-scripts test  --watchAll=false --env=jest-environment-jsdom-sixteen",
-    "test:coverage": "react-scripts test --coverage --watchAll=false --env=jest-environment-jsdom-sixteen"
+    "test:coverage": "react-scripts test --coverage --watchAll=false --env=jest-environment-jsdom-sixteen",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
@@ -78,6 +81,7 @@
     "prettier": "^2.0.1",
     "pretty-quick": "^2.0.1",
     "react-scripts": "3.4.1",
-    "source-map-explorer": "^2.4.2"
+    "source-map-explorer": "^2.4.2",
+    "gh-pages": "^2.2.0"
   }
 }

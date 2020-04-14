@@ -36,7 +36,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <React.Fragment>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Route path="/" component={App}></Route>
         </Router>
         <GlobalStyle />

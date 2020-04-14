@@ -10,8 +10,6 @@
 
 ## TODO
 
-- Add Avatar to sidebar
-- GitHub pages - live demo - automate via actions
 - Dark mode theme
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
@@ -28,6 +26,10 @@
 - [Source Map Explorer][source-map-explorer] to analyze code bloat
 - Mobile friendly
 - Unit & Integration Test examples
+
+# Live Demo
+
+[Check out the live demo](https://cmacdonnacha.github.io/react-boilerplate/)
 
 ## Set up
 

@@ -22,7 +22,7 @@ test('should render About page when clicked', () => {
   screen.getByText('About').click();
 
   // Assert
-  expect(screen.getByText('This is the about page')).toBeInTheDocument();
+  expect(screen.getByText('This is the about page', { exact: false })).toBeInTheDocument();
 });
 
 test('should render Friends page when clicking away and back again', () => {

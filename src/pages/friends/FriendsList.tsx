@@ -3,14 +3,15 @@ import styled from 'styled-components/macro';
 import { Friend, friendsSelector } from '../../slices/friendsSlice';
 import { useSelector } from 'react-redux';
 import FriendListItem from './FriendListItem';
+import Loader from '../../components/Loader';
 
 const List = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
   list-style: none;
   padding: 0;
-  max-width: 500px;
 `;
 
 const FriendsList: React.FunctionComponent = () => {
@@ -18,7 +19,7 @@ const FriendsList: React.FunctionComponent = () => {
 
   const renderFriends = () => {
     if (isLoading && friends.length === 0) {
-      return <span>Making friends...</span>;
+      return <Loader text={'Making friends...'} />;
     }
 
     if (hasErrors || (!isLoading && friends.length === 0)) {

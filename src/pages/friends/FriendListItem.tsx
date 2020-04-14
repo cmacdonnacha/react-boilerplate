@@ -18,12 +18,12 @@ const Container = styled.div`
   margin: 10px 0;
   min-height: 4rem;
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
 `;
 
 const FriendDetailsContainer = styled.div`
   display: flex;
-  margin-left: 10px;
+  margin-left: 20px;
   flex-direction: column;
 `;
 

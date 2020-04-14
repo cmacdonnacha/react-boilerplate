@@ -5,6 +5,8 @@ import { colours } from '../constants/colours';
 import { screenSize } from '../constants/screenSizes';
 import { UserFriends as UserFriendsIcon } from '@styled-icons/fa-solid/UserFriends';
 import { InfoCircle as InfoCircleIcon } from '@styled-icons/fa-solid/InfoCircle';
+import Avatar from './Avatar';
+import userProfile from '../../src/assets/user-profile.png';
 
 interface Props {
   isSidebarOpen?: boolean;
@@ -17,7 +19,7 @@ const Container = styled.nav<Props>`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  min-width: 200px;
+  min-width: 250px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 
   /* This style will trigger when the screen width is less than 640px (i.e tablet size) */
@@ -34,12 +36,7 @@ const Container = styled.nav<Props>`
 const SidebarList = styled.ul`
   list-style: none;
   padding: 0;
-  margin-top: 60px;
-
-  /* This style will trigger when the screen width is over 640px (i.e tablet size) */
-  @media (min-width: ${screenSize.medium}) {
-    margin-top: 0;
-  }
+  margin-top: 0;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -72,9 +69,27 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
+const ProfileContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: ${colours.primary};
+  color: ${colours.grey};
+
+  span {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+`;
+
 const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container isSidebarOpen={props.isSidebarOpen}>
+      <ProfileContainer>
+        <Avatar src={userProfile} size={'6rem'} />
+        <span>Lester Freamon</span>
+      </ProfileContainer>
       <SidebarList>
         <li>
           <StyledNavLink to="/" exact onClick={props.onLinkClicked}>

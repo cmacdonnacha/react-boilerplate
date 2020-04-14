@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Page from '../../components/Page';
 
-const Container = styled.section`
+const AboutText = styled.p`
   display: flex;
   flex: 1;
   background-color: white;
@@ -11,9 +12,9 @@ const Container = styled.section`
 
 const AboutPage: React.FunctionComponent = () => {
   return (
-    <Container>
-      <span>This is the about page</span>
-    </Container>
+    <Page heading="About">
+      <AboutText>This is the about page, where I tell you all about myself.</AboutText>
+    </Page>
   );
 };
 
