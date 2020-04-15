@@ -10,6 +10,7 @@ const Container = styled.main`
   flex: 1;
   margin: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 const Routes: React.FunctionComponent = () => {

@@ -31,7 +31,7 @@ const FriendName = styled.span`
   display: flex;
   flex-direction: column;
   color: ${colours.navy};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 8px;
 `;
@@ -47,7 +47,7 @@ const FriendEmail = styled.span`
 const FriendListItem: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <Container>
-      <Avatar src={props.friend.avatarUrl} size={'4rem'} />
+      <Avatar src={props.friend.avatarUrl} size={'5rem'} />
       <FriendDetailsContainer>
         <FriendName>{props.friend.name}</FriendName>
         <FriendEmail>{props.friend.email}</FriendEmail>
