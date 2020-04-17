@@ -1,17 +1,18 @@
-🚀 This is an opinionated ReactJS boilerplate. It's not perfect, but it's ideal 👌
+<h1 align="center">🚀 React Boilerplate 🚀</h1>
+<br>
+<p align="center">This is an opinionated ReactJS boilerplate. It's not perfect, but it's ideal 👌</p>
 
-<!-- prettier-ignore-start -->
-![continuous-integration-badge]
-![dependencies-badge]
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-<!-- prettier-ignore-end -->
-
-🛠 Work In Progress 🛠
-
-## TODO
-
-- Dark mode theme
-- When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
+<p align="center">
+  <a>
+    <img src="https://github.com/cmacdonnacha/react-boilerplate/workflows/Continuous%20Integration/badge.svg" />
+  </a>
+  <a>
+    <img src="https://img.shields.io/david/cmacdonnacha/react-boilerplate.svg" />
+  </a>
+  <a>
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="contributions" />
+  </a>
+</p>
 
 ## Features
 
@@ -21,15 +22,20 @@
 - [React Testing Library][react-testing-library]
 - [ESLint][eslint]
 - [Prettier][prettier]
-- [Github Actions CI][github-actions]
+- [Github Actions CI/CD][github-actions]
 - [Styled Icons Pack][styled-icons]
 - [Source Map Explorer][source-map-explorer] to analyze code bloat
 - Mobile friendly
-- Unit & Integration Test examples
+- Unit & Integration test examples
+- Accessability ready
 
-# Live Demo
+&nbsp;
+
+## Live Demo
 
 [Check out the live demo](https://cmacdonnacha.github.io/react-boilerplate/)
+
+&nbsp;
 
 ## Set up
 
@@ -38,9 +44,9 @@
 3. `npm install`
 4. That's it! See the **Available Commands** list below.
 
-## Available Commands
+&nbsp;
 
-In the project directory, you can run:
+## Available Commands
 
 ### `npm start`
 
@@ -53,7 +59,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode. Use `npm run test:no-watch` to run tests without a watcher.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm test:no-watch`
 
@@ -71,17 +76,24 @@ Runs the ESLint typescript code lint checker. Running `npm run lint:fix` will au
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
+Builds a production version of the app inside the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run analyze`
 
 This will run a production build and then analyze the output using [source-map-explorer] which analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
+
+&nbsp;
+
+## CI/CD
+
+This boilerplate uses [Github actions]([github-actions]) to continuously test, build and deploy. You can see the workflow file in the [workflows](.github/workflows/continuous-integration-workflow.yml) folder.
+
+If you would like to deploy your app to github pages make sure to set your own `GITHUB_ACCESS_TOKEN` variable. See [creating a token.](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token). Otherwise you can remove the `deploy` job.
+
+To enable github pages follow [these](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source) instructions.
+
+&nbsp;
 
 ## Testing
 
@@ -99,6 +111,8 @@ Some useful links on [react-testing-library][react-testing-library]:
 - [Jest DOM Custom Matchers - Use for Integration Tests](https://github.com/testing-library/jest-dom#custom-matchers)
 - [Jest Matchers - Use for Unit Tests](https://jestjs.io/docs/en/expect)
 
+&nbsp;
+
 ## Recommended VS Code Extensions
 
 - [Prettier][vscode-extension-prettier]
@@ -108,14 +122,20 @@ Some useful links on [react-testing-library][react-testing-library]:
 - [Auto Rename HTML Tags][vscode-extension-auto-rename-tag]
 - [Styled Components Syntax Highlighter][vscode-extension-styled-components]
 
+&nbsp;
+
 ## VS Code Snippets
 
 - [My Typescript React snippets][vs-code-my-typescript-react-snippets]
 - [Published Typescript React snippets][vs-code-typescript-react-snippets]
 
+&nbsp;
+
 ## Recommended VS Code Settings
 
 - [My preferred VS Code settings][vs-code-my-settings]
+
+&nbsp;
 
 ## Recommended Chrome Extensions
 
@@ -123,9 +143,18 @@ Some useful links on [react-testing-library][react-testing-library]:
 - [Wave - Evaluation Accessibility Tool][chrome-extension-wave]
 - [Redux DevTools][chrome-extension-redux-devtools]
 
+&nbsp;
+
 ## License
 
 Licensed under the MIT license.
+
+&nbsp;
+
+## TODO
+
+- Split Github Actions jobs into multiple jobs so that they can be run in parallel
+- When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
