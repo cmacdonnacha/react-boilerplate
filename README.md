@@ -89,6 +89,8 @@ This will run a production build and then analyze the output using [source-map-e
 
 This boilerplate uses [Github actions]([github-actions]) to continuously test, build and deploy. You can see the workflow file in the [workflows](.github/workflows/continuous-integration-workflow.yml) folder.
 
+![https://i.imgur.com/Zzmgfl5.png](https://i.imgur.com/Zzmgfl5.png)
+
 If you would like to deploy your app to github pages make sure to set your own `GITHUB_ACCESS_TOKEN` variable. See [creating a token.](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token). Otherwise you can remove the `deploy` job.
 
 To enable github pages follow [these](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source) instructions.
@@ -153,7 +155,7 @@ Licensed under the MIT license.
 
 ## TODO
 
-- Split Github Actions jobs into multiple jobs so that they can be run in parallel
+- Automatically bump version, git tag and perform release via github actions
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
