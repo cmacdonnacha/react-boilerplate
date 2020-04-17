@@ -13,7 +13,7 @@ const AboutText = styled.p`
 const AboutPage: React.FunctionComponent = () => {
   return (
     <Page heading="About">
-      <AboutText>This is the about page, where I tell you all about myself.</AboutText>
+      <AboutText>This is the about page, where I tell you all about myself!</AboutText>
     </Page>
   );
 };

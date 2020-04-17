@@ -1,6 +1,6 @@
 <h1 align="center">🚀 React Boilerplate 🚀</h1>
 <br>
-<p align="center">This is an opinionated ReactJS boilerplate. It's not perfect, but it's ideal 👌</p>
+<p align="center">This is an opinionated ReactJS boilerplate based off of <a href="https://create-react-app.dev/">create-react-app</a>. It's not perfect, but it's ideal 👌</p>
 
 <p align="center">
   <a>
@@ -156,6 +156,7 @@ Licensed under the MIT license.
 ## TODO
 
 - Automatically bump version, git tag and perform release via github actions
+- Use async/await instead of promise in friendsSlice.ts
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
