@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Friend, friendsSelector } from '../../slices/friendsSlice';
+import { Friend, friendsSelector } from 'slices/friendsSlice';
 import { useSelector } from 'react-redux';
 import FriendListItem from './FriendListItem';
-import Loader from '../../components/Loader';
+import Loader from 'components/Loader';
 
 const List = styled.ul`
   display: flex;

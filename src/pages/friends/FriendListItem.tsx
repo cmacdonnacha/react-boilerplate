@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Friend } from '../../slices/friendsSlice';
-import { colours } from '../../constants/colours';
-import Avatar from '../../components/Avatar';
+import { Friend } from 'slices/friendsSlice';
+import { colours } from 'constants/colours';
+import Avatar from 'components/Avatar';
 
 interface Props {
   friend: Friend;

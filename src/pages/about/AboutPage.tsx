@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Page from '../../components/Page';
+import Page from 'components/Page';
 
 const AboutText = styled.p`
   display: flex;

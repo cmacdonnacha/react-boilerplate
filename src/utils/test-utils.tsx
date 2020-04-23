@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import rootReducer from '../slices';
+import rootReducer from 'slices';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import { initialState as friendsInitialState } from '../slices/friendsSlice';
-import { RootState } from '../slices';
+import { initialState as friendsInitialState } from 'slices/friendsSlice';
+import { RootState } from 'slices';
 
 const rootInitialState: RootState = {
   friends: friendsInitialState,

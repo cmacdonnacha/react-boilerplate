@@ -1,8 +1,8 @@
 import React from 'react';
 import { waitFor, screen } from '@testing-library/react';
 import FriendsPage from './FriendsPage';
-import { renderWithRouterRedux } from '../../utils/test-utils';
-import { Friend } from '../../slices/friendsSlice';
+import { renderWithRouterRedux } from 'utils/test-utils';
+import { Friend } from 'slices/friendsSlice';
 import axios from 'axios';
 
 // Mock the Axios module. This ensure we don't call a real rest api while running tests.

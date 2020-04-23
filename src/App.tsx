@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import Sidebar from './components/Sidebar';
-import Routes from './components/Routes';
-import Header from './components/Header';
-import Backdrop from './components/Backdrop';
+import Sidebar from 'components/Sidebar';
+import Routes from 'components/Routes';
+import Header from 'components/Header';
+import Backdrop from 'components/Backdrop';
 
 const Layout = styled.div`
   height: 100%;

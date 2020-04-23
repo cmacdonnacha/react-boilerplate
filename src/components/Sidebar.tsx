@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { NavLink } from 'react-router-dom';
-import { colours } from '../constants/colours';
-import { screenSize } from '../constants/screenSizes';
+import { colours } from 'constants/colours';
+import { screenSize } from 'constants/screenSizes';
 import { UserFriends as UserFriendsIcon } from '@styled-icons/fa-solid/UserFriends';
 import { InfoCircle as InfoCircleIcon } from '@styled-icons/fa-solid/InfoCircle';
 import Avatar from './Avatar';
-import userProfile from '../../src/assets/user-profile.png';
+import userProfile from 'assets/user-profile.png';
 
 interface Props {
   isSidebarOpen?: boolean;

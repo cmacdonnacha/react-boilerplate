@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { colours } from '../constants/colours';
+import { colours } from 'constants/colours';
 
 const Container = styled.section`
   display: flex;

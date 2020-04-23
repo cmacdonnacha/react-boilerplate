@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { Switch, Route } from 'react-router-dom';
-import FriendsPage from '../pages/friends/FriendsPage';
-import AboutPage from '../pages/about/AboutPage';
+import FriendsPage from 'pages/friends/FriendsPage';
+import AboutPage from 'pages/about/AboutPage';
 
 const Container = styled.main`
   grid-area: content;

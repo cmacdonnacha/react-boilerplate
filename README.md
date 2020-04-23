@@ -17,6 +17,7 @@
 ## Features
 
 - [Redux Toolkit][redux-toolkit]
+- [React Router][react-router]
 - [Typescript][typescript]
 - [Jest][jest]
 - [React Testing Library][react-testing-library]
@@ -83,6 +84,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 This will run a production build and then analyze the output using [source-map-explorer] which analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
 
+In the dropdown on top left, click on `[number].[hash].chunk.js` to see which **node_modules** packages are taking up the most space or `main.[hash].chunk.js` which is the actual source code.
+
 &nbsp;
 
 ## CI/CD
@@ -94,6 +97,17 @@ This boilerplate uses [Github actions]([github-actions]) to continuously test, b
 If you would like to deploy your app to github pages make sure to set your own `GITHUB_ACCESS_TOKEN` variable. See [creating a token.](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token). Otherwise you can remove the `deploy` job.
 
 To enable github pages follow [these](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source) instructions.
+
+&nbsp;
+
+## Clean git history
+
+When cloning this repository you will get all of it's git history. If you would like to start fresh please do the following:
+
+1. Delete the `.git` folder
+2. `git init`
+
+This will also clear the husky config (tool that checks passing tests before git commit) so to re-enable this you will need to `npm install --save-dev husky` again.
 
 &nbsp;
 
@@ -156,7 +170,12 @@ Licensed under the MIT license.
 ## TODO
 
 - Automatically bump version, git tag and perform release via github actions
-- Use async/await instead of promise in friendsSlice.ts
+- Investigate issue with gh pages not working with very first workflow run after new clone
+- Use redux to store isSidebarOpen instead of prop drilling
+- No need for so many height:100%, see awesome-address-book
+- Exclude test-utils.tsx from production build
+- Add code coverage badge, look at "coveralls".
+- Note issue with husky when deleting .git folder
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
@@ -176,6 +195,7 @@ Licensed under the MIT license.
 [prettier]: https://prettier.io/docs/en/index.html
 [github-actions]: https://github.com/cmacdonnacha/react-boilerplate/actions
 [styled-icons]: https://styled-icons.js.org/
+[react-router]: https://reacttraining.com/react-router/web/guides/quick-start
 [vs-code-my-typescript-react-snippets]: https://gist.github.com/cmacdonnacha/334ef14cb301c426ee6eb166eb500a5a
 [vs-code-my-settings]: https://gist.github.com/cmacdonnacha/b6360f349c1a86aafda28f6d44c9d215
 [vs-code-typescript-react-snippets]: https://github.com/infeng/vscode-react-typescript#readme

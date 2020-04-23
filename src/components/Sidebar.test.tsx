@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import { renderWithRouterRedux } from '../utils/test-utils';
+import { renderWithRouterRedux } from 'utils/test-utils';
 import { screen } from '@testing-library/react';
 
 test('should display the correct sidebar items', () => {

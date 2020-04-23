@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from 'serviceWorker';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 import App from './App';
-import rootReducer from './slices';
-import { colours } from './constants/colours';
+import rootReducer from 'slices';
+import { colours } from 'constants/colours';
 
 const store = configureStore({ reducer: rootReducer });
 

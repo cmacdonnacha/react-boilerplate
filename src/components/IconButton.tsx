@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { StyledIcon } from '@styled-icons/styled-icon';
-import { colours } from '../constants/colours';
+import { colours } from 'constants/colours';
 
 interface Props {
   icon: StyledIcon;

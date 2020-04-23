@@ -61,8 +61,10 @@ export function fetchFriends() {
 
     try {
       //This is my mock rest server. See https://github.com/cmacdonnacha/mock-rest-endpoints for usage.
-      const response = await axios.get(`https://my-json-server.typicode.com/cmacdonnacha/mock-rest-endpoints/users`);
-      dispatch(getFriendsSuccess(response.data));
+      axios.get(`https://my-json-server.typicode.com/cmacdonnacha/mock-rest-endpoints/users`).then((res) => {
+        const friends: Friend[] = res.data;
+        dispatch(getFriendsSuccess(friends));
+      });
     } catch (error) {
       dispatch(getFriendsFailure());
     }

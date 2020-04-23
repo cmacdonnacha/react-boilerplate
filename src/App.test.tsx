@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import { renderWithRouterRedux } from './utils/test-utils';
+import { renderWithRouterRedux } from 'utils/test-utils';
 import { screen } from '@testing-library/react';
 
 test('should render Friends page as default', () => {
