@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate-ideal-starter",
-  "version": "0.1.2",
-  "description": "An opinionated react boilerplate with typescript, redux, react-testing-library, eslint & prettier.",
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "An opinionated react boilerplate with typescript, redux toolkit, react-testing-library, eslint & prettier.",
   "license": "MIT",
   "homepage": "https://cmacdonnacha.github.io/react-boilerplate/",
   "scripts": {

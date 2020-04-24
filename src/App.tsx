@@ -18,6 +18,8 @@ const Layout = styled.div`
 `;
 
 function App(): JSX.Element {
+  // The sidebar is closed by default on mobile and a menu button is displayed to open it.
+  // The code below is really only applicable on mobile as it's always displayed on larger screens.
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = (): void => {
@@ -25,6 +27,7 @@ function App(): JSX.Element {
   };
 
   const onSidebarLinkClicked = (): void => {
+    // Close the sidebar when a link is clicked
     if (isSidebarOpen) {
       toggleSidebar();
     }
