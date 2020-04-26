@@ -10,7 +10,7 @@ const AboutText = styled.p`
   align-items: center;
 `;
 
-const AboutPage: React.FunctionComponent = () => {
+const AboutPage = () => {
   return (
     <Page heading="About">
       <AboutText>This is the about page, where I tell you all about myself!</AboutText>

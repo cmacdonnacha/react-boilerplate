@@ -14,7 +14,7 @@ const List = styled.ul`
   padding: 0;
 `;
 
-const FriendsList: React.FunctionComponent = () => {
+const FriendsList = () => {
   const { friends, isLoading, hasErrors } = useSelector(friendsSelector);
 
   const renderFriends = () => {

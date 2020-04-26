@@ -4,7 +4,7 @@ import { fetchFriends } from 'slices/friendsSlice';
 import Page from 'components/Page';
 import FriendsList from './FriendsList';
 
-const FriendsPage: React.FunctionComponent = () => {
+const FriendsPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {

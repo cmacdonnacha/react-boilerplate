@@ -19,6 +19,7 @@ module.exports = {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off", // No need for this rule since we are using Typescript
     "@typescript-eslint/explicit-function-return-type": "off",
     "curly": "error",
   },

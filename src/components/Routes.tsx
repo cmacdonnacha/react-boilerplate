@@ -13,7 +13,7 @@ const Container = styled.main`
   overflow-x: hidden;
 `;
 
-const Routes: React.FunctionComponent = () => {
+const Routes = () => {
   return (
     <Container>
       {/*

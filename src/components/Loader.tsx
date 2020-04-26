@@ -63,8 +63,8 @@ const Dot = styled.span`
 
 const Text = styled.span``;
 
-const Loader: React.FunctionComponent<Props> = (props: Props) => {
-  const textElement = props.text ? <Text>{props.text}</Text> : null;
+const Loader = ({ text }: Props) => {
+  const textElement = text ? <Text>{text}</Text> : null;
 
   return (
     <Container>

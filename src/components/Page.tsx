@@ -2,6 +2,11 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { colours } from 'constants/colours';
 
+interface Props {
+  heading: string;
+  children?: React.ReactElement | React.ReactElement[];
+}
+
 const Container = styled.section`
   display: flex;
   flex: 1;
@@ -24,16 +29,11 @@ const Content = styled.article`
   align-items: center;
 `;
 
-interface Props {
-  heading: string;
-  children?: React.ReactElement | React.ReactElement[];
-}
-
-const Page: React.FunctionComponent<Props> = (props: Props) => {
+const Page = ({ heading, children }: Props) => {
   return (
     <Container>
-      <h1>{props.heading}</h1>
-      <Content>{props.children}</Content>
+      <h1>{heading}</h1>
+      <Content>{children}</Content>
     </Container>
   );
 };

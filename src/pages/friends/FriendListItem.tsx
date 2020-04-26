@@ -44,13 +44,13 @@ const FriendEmail = styled.span`
   font-size: 0.8rem;
 `;
 
-const FriendListItem: React.FunctionComponent<Props> = (props: Props) => {
+const FriendListItem = ({ friend }: Props) => {
   return (
     <Container>
-      <Avatar src={props.friend.avatarUrl} size={'5rem'} />
+      <Avatar src={friend.avatarUrl} size={'5rem'} />
       <FriendDetailsContainer>
-        <FriendName>{props.friend.name}</FriendName>
-        <FriendEmail>{props.friend.email}</FriendEmail>
+        <FriendName>{friend.name}</FriendName>
+        <FriendEmail>{friend.email}</FriendEmail>
       </FriendDetailsContainer>
     </Container>
   );

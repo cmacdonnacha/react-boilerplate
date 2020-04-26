@@ -83,22 +83,22 @@ const ProfileContainer = styled.div`
   }
 `;
 
-const Sidebar: React.FunctionComponent<Props> = (props: Props) => {
+const Sidebar = ({ isSidebarOpen, onLinkClicked }: Props) => {
   return (
-    <Container isSidebarOpen={props.isSidebarOpen}>
+    <Container isSidebarOpen={isSidebarOpen}>
       <ProfileContainer>
         <Avatar src={userProfile} size={'6rem'} />
         <span>Lester Freamon</span>
       </ProfileContainer>
       <SidebarList>
         <li>
-          <StyledNavLink to="/" exact onClick={props.onLinkClicked}>
+          <StyledNavLink to="/" exact onClick={onLinkClicked}>
             <UserFriendsIcon />
             Friends
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/about" onClick={props.onLinkClicked}>
+          <StyledNavLink to="/about" onClick={onLinkClicked}>
             <InfoCircleIcon />
             About
           </StyledNavLink>
