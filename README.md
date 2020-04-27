@@ -169,7 +169,7 @@ Licensed under the MIT license.
 
 ## TODO
 
-- Bug: Investigate issue with gh pages not working with very first workflow run after new clone
+- Bug: Investigate issue with gh pages not working with very first workflow run after new clone. Currently I have to use global gh-pages package for first time `gh-pages -d build`.
 - When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
