@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Friend } from 'slices/friendsSlice';
+import { Friend } from 'models/Friend';
 import { colours } from 'constants/colours';
 import Avatar from 'components/Avatar';
 

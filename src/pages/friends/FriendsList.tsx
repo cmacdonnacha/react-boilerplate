@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { Friend, friendsSelector } from 'slices/friendsSlice';
+import { friendsSelector } from 'slices/friendsSlice';
+import { Friend } from 'models/Friend';
 import { useSelector } from 'react-redux';
 import FriendListItem from './FriendListItem';
 import Loader from 'components/Loader';

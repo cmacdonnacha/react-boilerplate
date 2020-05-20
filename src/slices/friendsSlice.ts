@@ -1,18 +1,12 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit';
 import { RootState } from '.';
-import axios from 'axios';
+import { Friend } from 'models/Friend';
+import FriendsAPI from 'services/FriendsAPI';
 
 export interface FriendsState {
   isLoading: boolean;
   hasErrors: boolean;
   friends: Friend[];
-}
-
-export interface Friend {
-  id: number;
-  name: string;
-  avatarUrl: string;
-  email: string;
 }
 
 export const initialState: FriendsState = {
@@ -28,7 +22,7 @@ const friendsSlice = createSlice({
   name: 'friends',
   initialState,
   reducers: {
-    getFriends: (state: FriendsState) => {
+    getFriendsStarted: (state: FriendsState) => {
       state.isLoading = true;
     },
     getFriendsSuccess: (state: FriendsState, action: PayloadAction<Friend[]>) => {
@@ -37,7 +31,7 @@ const friendsSlice = createSlice({
       state.isLoading = false;
       state.hasErrors = false;
     },
-    getFriendsFailure: (state) => {
+    getFriendsFailed: (state) => {
       state.isLoading = false;
       state.hasErrors = true;
     },
@@ -45,7 +39,7 @@ const friendsSlice = createSlice({
 });
 
 // Three actions generated from the slice. We don't have to define them above since they use the same names as the reducers.
-export const { getFriends, getFriendsSuccess, getFriendsFailure } = friendsSlice.actions;
+export const { getFriendsStarted, getFriendsSuccess, getFriendsFailed } = friendsSlice.actions;
 
 // A selector which we'll use to access the 'friends' root state from a React component instead of using mapStateToProps (the old way).
 // Note: This is not the `friends` property you see at the top of this file but rather the root Friends state in index.ts. They just share the same name.
@@ -57,16 +51,13 @@ export default friendsSlice.reducer;
 // Asynchronous thunk action
 export function fetchFriends() {
   return async (dispatch: Dispatch) => {
-    dispatch(getFriends());
+    dispatch(getFriendsStarted());
 
     try {
-      //This is my mock rest server. See https://github.com/cmacdonnacha/mock-rest-endpoints for usage.
-      axios.get(`https://my-json-server.typicode.com/cmacdonnacha/mock-rest-endpoints/users`).then((res) => {
-        const friends: Friend[] = res.data;
-        dispatch(getFriendsSuccess(friends));
-      });
+      const friends: Friend[] = await FriendsAPI.getFriends();
+      dispatch(getFriendsSuccess(friends));
     } catch (error) {
-      dispatch(getFriendsFailure());
+      dispatch(getFriendsFailed());
     }
   };
 }
