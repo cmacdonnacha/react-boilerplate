@@ -26,7 +26,7 @@
 - [Github Actions CI/CD][github-actions]
 - [Styled Icons Pack][styled-icons]
 - [Source Map Explorer][source-map-explorer] to analyze code bloat
-- Mobile friendly
+- Mobile friendly / Responsive design
 - Unit & Integration test examples
 - Accessability ready
 
