@@ -61,11 +61,11 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode. Use `npm run test:no-watch` to run tests without a watcher.<br />
 
-### `npm test:no-watch`
+### `npm run test:no-watch`
 
 Runs tests without a watcher.
 
-### `npm test:coverage`
+### `npm run test:coverage`
 
 Displays the code coverage within the console and also generates a coverage folder.
 
@@ -90,7 +90,7 @@ In the dropdown on top left, click on `[number].[hash].chunk.js` to see which **
 
 ## CI/CD
 
-This boilerplate uses [Github actions]([github-actions]) to continuously test, build and deploy. You can see the workflow file in the [workflows](.github/workflows/continuous-integration-workflow.yml) folder.
+This boilerplate uses [Github actions][github-actions] to continuously test, build and deploy. You can see the workflow file in the [workflows](.github/workflows/continuous-integration-workflow.yml) folder.
 
 ![https://i.imgur.com/Zzmgfl5.png](https://i.imgur.com/Zzmgfl5.png)
 
