@@ -1,11 +1,11 @@
 import React from 'react';
 import App from './App';
-import { renderWithRouterRedux } from 'utils/test-utils';
+import { renderWithReactQueryRouter } from 'utils/test-utils';
 import { screen } from '@testing-library/react';
 
 test('should render Friends page as default', () => {
   // Arrange
-  renderWithRouterRedux(<App />, ['/']);
+  renderWithReactQueryRouter(<App />, ['/']);
 
   // Act
   const element = screen.getByText('My Friends');
@@ -16,7 +16,7 @@ test('should render Friends page as default', () => {
 
 test('should render About page when clicked', () => {
   // Arrange
-  renderWithRouterRedux(<App />, ['/']);
+  renderWithReactQueryRouter(<App />, ['/']);
 
   // Act
   screen.getByText('About').click();
@@ -27,7 +27,7 @@ test('should render About page when clicked', () => {
 
 test('should render Friends page when clicking away and back again', () => {
   // Arrange
-  renderWithRouterRedux(<App />, ['/']);
+  renderWithReactQueryRouter(<App />, ['/']);
 
   // Act
   screen.getByText('About').click();

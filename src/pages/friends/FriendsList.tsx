@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { friendsSelector } from 'slices/friendsSlice';
 import { Friend } from 'models/Friend';
-import { useSelector } from 'react-redux';
 import FriendListItem from './FriendListItem';
 import Loader from 'components/Loader';
+import FriendsAPI from 'services/FriendsAPI';
+import { QueryStatus } from 'constants/queryStatus';
+import { useQuery } from 'react-query';
 
 const List = styled.ul`
   display: flex;
@@ -16,18 +17,22 @@ const List = styled.ul`
 `;
 
 const FriendsList = () => {
-  const { friends, isLoading, hasErrors } = useSelector(friendsSelector);
+  const { status, data } = useQuery('friendsData', FriendsAPI.getFriends);
 
   const renderFriends = () => {
-    if (isLoading && friends.length === 0) {
+    if (status === QueryStatus.LOADING) {
       return <Loader text={'Making friends...'} />;
     }
 
-    if (hasErrors || (!isLoading && friends.length === 0)) {
-      return <span>Unable to find friends :-(</span>;
+    if (status === QueryStatus.ERROR) {
+      return <span>Something went wrong :-(</span>;
     }
 
-    return friends.slice(0, 10).map((friend: Friend) => (
+    if (data?.length === 0) {
+      return <span>No friends found :-(</span>;
+    }
+
+    return data?.slice(0, 10).map((friend: Friend) => (
       <li key={friend.id}>
         <FriendListItem friend={friend} />
       </li>

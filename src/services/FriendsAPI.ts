@@ -1,12 +1,11 @@
 import { Friend } from 'models/Friend';
-import { FRIENDS_URL } from '../constants';
+import { FRIENDS_URL } from '../constants/urls';
 import FetchAPI from './FetchAPI';
 
 const FriendsAPI = {
   getFriends: async () => {
-    const response = await FetchAPI.get(FRIENDS_URL);
-    const friends: Friend[] = response;
-    return friends;
+    const friends: Friend[] = await FetchAPI.get(FRIENDS_URL);
+    return friends || [];
   },
 };
 

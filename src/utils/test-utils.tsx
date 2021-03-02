@@ -2,15 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import rootReducer from 'slices';
-import { configureStore } from '@reduxjs/toolkit';
-import { Provider } from 'react-redux';
-import { initialState as friendsInitialState } from 'slices/friendsSlice';
-import { RootState } from 'slices';
-
-const rootInitialState: RootState = {
-  friends: friendsInitialState,
-};
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 export function renderWithRouter(ui: JSX.Element, initialRoutes: string[]) {
   const history = createMemoryHistory({ initialEntries: initialRoutes });
@@ -21,16 +13,21 @@ export function renderWithRouter(ui: JSX.Element, initialRoutes: string[]) {
   };
 }
 
-export function renderWithRouterRedux(ui: JSX.Element, initialRoutes: string[], initialState: object = rootInitialState) {
-  const state = initialState;
+export function renderWithReactQueryRouter(ui: JSX.Element, initialRoutes: string[]) {
   const history = createMemoryHistory({ initialEntries: initialRoutes });
-  const myStore = configureStore({ reducer: rootReducer, preloadedState: state });
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
 
   return {
     ...render(
-      <Provider store={myStore}>
+      <QueryClientProvider client={queryClient}>
         <Router history={history}>{ui}</Router>
-      </Provider>,
+      </QueryClientProvider>,
     ),
     history,
   };

@@ -16,7 +16,7 @@
 
 ## Features
 
-- [Redux Toolkit][redux-toolkit]
+- [React Query][react-query]
 - [React Router][react-router]
 - [Typescript][typescript]
 - [Jest][jest]
@@ -157,7 +157,6 @@ Some useful links on [react-testing-library][react-testing-library]:
 
 - [Axe - Web Accessibility Testing][chrome-extension-axe]
 - [Wave - Evaluation Accessibility Tool][chrome-extension-wave]
-- [Redux DevTools][chrome-extension-redux-devtools]
 
 &nbsp;
 
@@ -179,7 +178,7 @@ Licensed under the MIT license.
 [dependencies-badge]: https://img.shields.io/david/cmacdonnacha/react-boilerplate.svg
 [package]: https://www.npmjs.com/package/cra-template-ideal-starter
 [typescript]: https://github.com/microsoft/TypeScript
-[redux-toolkit]: https://github.com/reduxjs/redux-toolkit
+[react-query]: https://github.com/tannerlinsley/react-query
 [jest]: https://jestjs.io/
 [react-testing-library]: https://testing-library.com/docs/react-testing-library/intro
 [cra]: https://github.com/facebook/create-react-app
@@ -201,5 +200,4 @@ Licensed under the MIT license.
 [vscode-extension-styled-components]: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
 [chrome-extension-axe]: https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd
 [chrome-extension-wave]: https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh
-[chrome-extension-redux-devtools]: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 <!-- prettier-ignore-end -->

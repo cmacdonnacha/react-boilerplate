@@ -1,7 +1,7 @@
 import React from 'react';
 import { waitFor, screen } from '@testing-library/react';
 import FriendsPage from './FriendsPage';
-import { renderWithRouterRedux } from 'utils/test-utils';
+import { renderWithReactQueryRouter } from 'utils/test-utils';
 import axios from 'axios';
 import { Friend } from 'models/Friend';
 
@@ -39,7 +39,7 @@ beforeEach(() => axiosMock.get.mockReset());
 test('should find a friend within the list', async () => {
   // Arrange
   fetchMockFriends();
-  renderWithRouterRedux(<FriendsPage />, ['/']);
+  renderWithReactQueryRouter(<FriendsPage />, ['/']);
 
   // Act
   const element = await waitFor(() => screen.getByText('Omar Little'));
@@ -52,7 +52,7 @@ test('should find a friend within the list', async () => {
 test('should display loading text while waiting for friends to load', async () => {
   // Arrange
   fetchMockFriends();
-  renderWithRouterRedux(<FriendsPage />, ['/']);
+  renderWithReactQueryRouter(<FriendsPage />, ['/']);
 
   // Act
   await waitFor(() => {
@@ -64,10 +64,10 @@ test('should display loading text while waiting for friends to load', async () =
 test('should display error message when no friends found', async () => {
   // Arrange
   fetchMockNoFriends();
-  renderWithRouterRedux(<FriendsPage />, ['/']);
+  renderWithReactQueryRouter(<FriendsPage />, ['/']);
 
   // Act
-  const element = await waitFor(() => screen.getByText('Unable to find friends :-('));
+  const element = await waitFor(() => screen.getByText('No friends found :-('));
 
   // Assert
   expect(axiosMock.get).toHaveBeenCalledTimes(1);
@@ -76,10 +76,10 @@ test('should display error message when no friends found', async () => {
 
 test('should display error message when an error occurs while fetching friends', async () => {
   // Arrange
-  renderWithRouterRedux(<FriendsPage />, ['/']);
+  renderWithReactQueryRouter(<FriendsPage />, ['/']);
 
   // Act
-  const element = await waitFor(() => screen.getByText('Unable to find friends :-('));
+  const element = await waitFor(() => screen.getByText('No friends found :-('));
 
   // Assert
   expect(axiosMock.get).toHaveBeenCalledTimes(1);

@@ -1,11 +1,11 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import { renderWithRouterRedux } from 'utils/test-utils';
+import { renderWithRouter } from 'utils/test-utils';
 import { screen } from '@testing-library/react';
 
 test('should display the correct sidebar items', () => {
   // Arrange
-  renderWithRouterRedux(<Sidebar />, ['/']);
+  renderWithRouter(<Sidebar />, ['/']);
 
   // Act
   const friendsLink = screen.getByText('Friends');
@@ -18,7 +18,7 @@ test('should display the correct sidebar items', () => {
 
 test('should change url when clicking on About link', () => {
   // Arrange
-  const { history } = renderWithRouterRedux(<Sidebar />, ['/']);
+  const { history } = renderWithRouter(<Sidebar />, ['/']);
 
   // Act
   const aboutLink = screen.getByText('About');
@@ -30,7 +30,7 @@ test('should change url when clicking on About link', () => {
 
 test('should ensure the About link is set to active when clicked', () => {
   // Arrange
-  renderWithRouterRedux(<Sidebar />, ['/']);
+  renderWithRouter(<Sidebar />, ['/']);
 
   // Act
   const aboutLink = screen.getByText('About');
@@ -42,7 +42,7 @@ test('should ensure the About link is set to active when clicked', () => {
 
 test('should ensure the About link is NOT set to active when another link is clicked', () => {
   // Arrange
-  renderWithRouterRedux(<Sidebar />, ['/']);
+  renderWithRouter(<Sidebar />, ['/']);
 
   // Act
   const aboutLink = screen.getByText('About');
