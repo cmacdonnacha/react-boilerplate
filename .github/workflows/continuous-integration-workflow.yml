@@ -15,10 +15,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
-          version: '12.x'
+          node-version: '14'
 
       - name: Install node modules
         run: npm ci
@@ -35,10 +34,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
-          version: '12.x'
+          node-version: '14'
 
       - name: Install node modules
         run: npm ci
@@ -55,10 +53,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
-          version: '12.x'
+          node-version: '14'
 
       - name: Install node modules
         run: npm ci
@@ -78,6 +75,7 @@ jobs:
     # Only deploy if these other jobs have completed successfully
     needs: [test, lint, build]
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -88,10 +86,9 @@ jobs:
         with:
           name: build
 
-      # Deploy to github pages
       - name: Deploy build
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: build
