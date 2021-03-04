@@ -3,7 +3,7 @@ import Page from 'components/Page';
 import FriendsList from './FriendsList';
 
 const FriendsPage = () => {
-   return (
+  return (
     <Page heading="My Friends">
       <FriendsList />
     </Page>

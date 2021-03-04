@@ -1,6 +1,5 @@
 node_modules/
-src/serviceWorker.ts
 public/
-.eslintrc.js
-.prettierrc.js
+.prettierrc
 src/react-app-env.d.ts
+reportWebVitals.ts

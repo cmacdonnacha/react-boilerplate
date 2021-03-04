@@ -100,6 +100,16 @@ To enable github pages follow [these](https://help.github.com/en/github/working-
 
 &nbsp;
 
+## Updating dependencies
+
+`npm-check-updates` makes it easy to update your dependencies. All you have to do is run the following:
+
+1. `npm install -g npm-check-updates`
+2. `npm cu` which displays the outdated dependencies.
+3. `npm install` which will then install the new versions for you.
+
+&nbsp;
+
 ## Clean git history
 
 When cloning this repository you will get all of it's git history. If you would like to start fresh please do the following:
@@ -169,7 +179,6 @@ Licensed under the MIT license.
 ## TODO
 
 - Bug: Investigate issue with gh pages not working with very first workflow run after new clone. Currently I have to use global gh-pages package for first time `gh-pages -d build`.
-- When [this PR](https://github.com/facebook/create-react-app/pull/8362) is merged, change `"test": "react-scripts test --env=jest-environment-jsdom-sixteen"` back to `"test": "react-scripts test"`. This is a temp alternative, see [this](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0). Change `test:no-watch` as well.
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
