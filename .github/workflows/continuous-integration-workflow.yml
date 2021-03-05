@@ -7,7 +7,7 @@ on:
 ## Run test, lint and build jobs in parallel to speed up the build time.
 jobs:
   test:
-    name: Test
+    name: Test 🚨
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +26,7 @@ jobs:
         run: npm run test:no-watch
 
   lint:
-    name: Lint
+    name: Lint 👕
     runs-on: ubuntu-latest
 
     steps:
@@ -45,7 +45,7 @@ jobs:
         run: npm run lint
 
   build:
-    name: Build
+    name: Build 👷
     runs-on: ubuntu-latest
 
     steps:
@@ -71,7 +71,7 @@ jobs:
           path: build
 
   deploy:
-    name: Deploy
+    name: Deploy 🚀
     # Only deploy if these other jobs have completed successfully
     needs: [test, lint, build]
     runs-on: ubuntu-latest
