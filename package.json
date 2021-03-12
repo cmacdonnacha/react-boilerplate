@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "An opinionated react boilerplate with typescript, react-query, react-router, react-testing-library, eslint & prettier.",
   "license": "MIT",
+  "homepage": "https://cmacdonnacha.github.io/react-boilerplate/",
   "scripts": {
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "build": "react-scripts build",
