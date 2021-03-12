@@ -100,12 +100,21 @@ To enable github pages follow [these](https://help.github.com/en/github/working-
 
 &nbsp;
 
+## Host your production build locally
+
+This can be useful when testing production builds vs dev builds or checking how well your build is minified.
+
+1. `npm run build`
+2. `npx serve -s build`
+
+&nbsp;
+
 ## Updating dependencies
 
 `npm-check-updates` makes it easy to update your dependencies. All you have to do is run the following:
 
 1. `npm install -g npm-check-updates`
-2. `npm cu` which displays the outdated dependencies.
+2. `ncu -u` which displays the outdated dependencies and updates your `package.json` file.
 3. `npm install` which will then install the new versions for you.
 
 &nbsp;
